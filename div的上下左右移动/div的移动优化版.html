@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		#div1{
+			width: 100px;
+			height: 100px;
+			background-color: #FF0000;
+			position: absolute;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var div1 = document.getElementById("div1");
+			var speed = 30;
+			var dir = 0;
+			var timer = setInterval(function(){
+				
+				switch(dir){
+					case 37:
+						div1.style.left = div1.offsetLeft - speed +"px";
+						break;
+					case 38:
+						div1.style.top = div1.offsetTop - speed +"px";
+						break;
+					case 39:
+						div1.style.left = div1.offsetLeft + speed +"px";
+						break;
+					case 40:
+						div1.style.top = div1.offsetTop + speed +"px";
+						break;
+				}
+				
+				
+			},50);
+			document.onkeydown = function(event){
+				event = event || window.event;
+				dir = event.keyCode;
+				if(event.ctrlKey){
+					speed = 60;
+				}else{
+					speed = 30;
+				}
+				document.onkeyup = function(){
+					dir = 0;
+				};
+			};
+			
+			
+		};
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>
