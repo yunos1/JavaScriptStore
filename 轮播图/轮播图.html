@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#outer{
+			background-color: black;
+			width: 520px;
+			height: 300px;
+			margin: 100px auto;
+			padding: 10px 0;
+			position: relative;
+			overflow: hidden;
+		}
+		#imgList{
+			position: absolute;
+		}
+		#img_ul{
+			list-style: none;
+			
+		}
+		#img_ul li{
+			margin: 0 10px;
+			float: left;
+		}
+		#navNav{
+			position: absolute;
+			bottom: 20px;
+		}
+		#navNav a{
+			width: 25px;
+			height: 15px;
+			background-color: red;
+			opacity: 0.5;
+			float: left;
+			margin: 0 10px;
+		}
+		#navNav a:hover{
+			background-color: #000000;
+		}
+		
+	</style>
+	<script>
+		window.onload = function(){
+			var outer = document.getElementById("outer");
+			var imgList = document.getElementById("imgList");
+			var imgArr = document.getElementsByTagName("img");
+			var navNav = document.getElementById("navNav");
+			var allA = document.getElementsByTagName("a");
+			
+			imgList.style.width = 520 * imgArr.length + "px";
+			
+			navNav.style.left = (outer.offsetWidth - navNav.offsetWidth)/2 + "px";
+			
+			var index = 0 ;
+			allA[index].style.backgroundColor = "#000000";
+			
+			for(var i = 0;i<allA.length;i++){
+				
+				allA[i].num = i;
+				
+				allA[i].onclick = function(){
+					
+					clearInterval(timer);
+					
+					index = this.num;
+					
+					move(imgList,"left",-520 * index,20,function(){
+						autoChange();
+					});
+					
+					setA();
+					
+					
+				};
+			}
+			
+			autoChange();
+			var timer;
+			function autoChange(){
+		
+				timer = setInterval(function(){
+					
+					index++;
+					index %= imgArr.length;
+					
+					move(imgList,"left",-520 * index,20,function(){
+						setA();
+					});
+				},2000);
+			};
+			
+			
+			function setA(){
+				
+				if(index >=imgArr.length-1){
+					index = 0;
+					imgList.style.left = 0;
+				}
+				for(var i = 0;i<allA.length;i++){
+					
+					allA[i].style.backgroundColor = "";
+				}
+					allA[index].style.backgroundColor = "black";
+			};
+			
+			
+		};
+		
+		
+		
+		function move(obj,attr,target,speed,callback){
+			var current = parseInt(getStyle(obj,attr));
+			if(current > target){
+				speed = -speed;
+			}
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function(){
+				var oldValue = parseInt(getStyle(obj,attr));
+				var newValue = oldValue + speed;
+				if(newValue > target && speed > 0 || newValue < target && speed <0){
+					newValue = target;
+				}
+				
+				obj.style[attr] = newValue + "px";
+				
+				if(newValue == target){
+					
+					clearInterval(obj.timer);
+					callback && callback();
+				}
+				
+			},20);
+		};
+		
+		function getStyle(obj,name){
+			if(window.getComputedStyle){
+				return getComputedStyle(obj,null)[name];
+			}else{
+				return obj.currentStyle[name];
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<div id="outer">
+		
+		<div id="imgList">
+			<ul id="img_ul">
+				<li><img src="img/1.jpg" alt=""></li>
+				<li><img src="img/2.jpg" alt=""></li>
+				<li><img src="img/3.jpg" alt=""></li>
+				<li><img src="img/4.jpg" alt=""></li>
+				<li><img src="img/5.jpg" alt=""></li>
+				<li><img src="img/1.jpg" alt=""></li>
+			</ul>
+		</div>
+		<div id="navNav">
+			<a href="javascript:;"></a>
+			<a href="javascript:;"></a>
+			<a href="javascript:;"></a>
+			<a href="javascript:;"></a>
+			<a href="javascript:;"></a>
+		</div>
+		
+	</div>
+	
+</body>
+</html>
