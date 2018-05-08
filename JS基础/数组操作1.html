@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>
+
+	</title>
+	<script type="text/javascript">
+		var infos = [["小A","女",21,"大一"],["小B","男",23,"大三"],["小C","男",24,"大四"],["小D","女",21,"大一"],["小E","女",22,"大四"],["小F","男",21,"大一"],["小G","女",22,"大二"],["小H","女",20,"大三"],["小I","女",20,"大一"],["小J","男",20,"大三"]];
+ 
+		var tmp = new Array();
+
+		var result = new Array();
+
+
+		var a = 0;
+		//var b = 0;
+		for(var i = 0;i<infos.length;i++){
+
+			if(infos[i][3] == "大一"){
+				tmp[a] = infos[i]; 
+				a++;
+			}
+		}
+		for(var j = 0;j<tmp.length;j++){
+			if(tmp[j][1] == "女"){
+			document.write(tmp[j] + '</br>');	
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//	alert(infos[0]);
+		/*for(var i in infos){
+		    
+		        if((infos[i][3] == "大一" ) && (infos[i][1]=="女")){
+		          // alert(i);
+		           for(var j = 0;j<tmp.length;j++){
+		           		tmp[j] = infos[i];
+		           		alert(tmp[j][0]);
+		           }
+		           document.write(tmp[j]+'<br/>');
+		           
+		        
+		   		}
+
+		    
+		}*/
+	/*
+		var arr1=new Array(),n=0; 
+		for(i=0;i<infos.length;i++){
+
+			if(infos[i][3]=="大一"){
+				arr1[n]=infos[i];
+				document.write(arr1[n]+"<br/>");n=n+1;
+			}
+		}
+
+		document.write("大一人数: "+arr1.length+"<br/>");
+
+		for(i=0;i<arr1.length;i++){ 
+			if(arr1[i][1]=="女"){
+				document.write(arr1[i]+"<br/>");
+			}
+		}
+*/
+ 
+ 
+  
+
+	   
+</script>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+		
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+
+			$('.add').click(function(){
+				$(".ul").append('<li class="li">nihaoa <button class="del">del</button></li>')
+			})
+
+			$(".ul").on('click','.del',function(){
+				$(this).parent().remove()
+			})
+
+		}
+		
+
+
+	</script>
+</head>
+<body>
+
+	<button class="add" type="button">add</button>
+	
+	<ul class="ul">
+		<li>nihaoa 
+			
+			<button class="del">del</button>
+		</li>
+		<li>nihaoa 
+			
+			<button class="del">del</button>
+		</li>
+		<li>nihaoa 
+			
+			<button class="del">del</button>
+		</li>
+		<li>nihaoa 
+			
+			<button class="del">del</button>
+		</li>
+		<li>nihaoa 
+			
+			<button class="del"">del</button>
+		</li>
+	</ol>
+</body>
+</html>
