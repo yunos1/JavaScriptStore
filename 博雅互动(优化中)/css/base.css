@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, ul, li, form, table, tr, th, td { margin: 0; padding: 0; }
+body { overflow-y: scroll; *overflow-y:auto;background: #fff; -webkit-text-size-adjust:none;}
+body, input, textarea, select { font: 12px/1.5 "Hiragino Sans GB", "Microsoft YaHei", Arial, Tahoma, Helvetica, Geneva, sans-serif; color: #444866; }
+h1, h2, h3, h4, h5, h6 { font-size:1em; margin:0 }
+h6 { font-weight: normal; }
+input, textarea, select, button { font-size: 12px; font-size:0.375rem ; font-weight: normal; font-family: inherit }
+input[type="button"], input[type="submit"], select, button { cursor: pointer }
+table { border-collapse: collapse; border-spacing: 0; width: 100%; } 
+em, i, b { font-style: normal; font-weight: normal }
+ul,ol { list-style: none; }  /*清除列表风格*/
+img { border: none; vertical-align: middle; -ms-interpolation-mode: bicubic; } /*  去掉图片低测默认的3像素空白缝隙*/
+input, textarea, select { resize: none; }  /*防止输入框、多行文本框、选择框拖动*/
+/*清除浮动*/
+.clearfix:after { content:"";visibility:hidden;display:block;height:0; clear:both;}
+.clearfix{Zoom:1;}
+a { text-decoration: none; outline: none; color: #444866; cursor: pointer; transition: background-color 0.2s linear 0s; }
+a:hover { text-decoration: none; color: #33b972; }
+/*公共类*/
+.fr { float: right; }
+.fl { float: left; }
+.w { width: 1000px; margin:0 auto;}  /*版心 提取 */
+/*头部*/
+.header {
+	height: 58px;
+	background-color: #191D3A;
+}
+.header .logo {
+	float: left;
+}
+.header .logo a{
+	display: block;
+	width: 225px;
+	height: 58px;
+	background: url(../images/logo.png) no-repeat left top;
+	text-indent: -5000em;
+}
+.header .nav {
+	float: left;
+	width: 640px;
+}
+.header .nav ul li {
+	float: left;
+}
+.header .nav ul li a{
+	display: block;
+	width: 85px;
+	height: 58px;
+	border-left: #252947;
+	color:#818496;
+	text-align: center;
+	line-height: 58px;
+	font-size:14px;
+}
+.header .nav ul li a:hover {
+	color:#fff;
+}
+.header .nav .current a{
+	background-color:  #252947;
+	color:#fff;
+}
+.header .nav .joinus a {
+	background-color: #38B774;
+	width: 100px;
+	height: 34px;
+	color:#fff;
+	margin: 12px 0 0 9px;
+	line-height:34px;
+	border-radius: 3px;
+}
+.changelang {
+	float: right;
+	width: 60px;
+	line-height: 58px;
+	font-size: 14px;
+}
+.changelang .chin {
+	color: #38B774;
+}
+/*尾部*/
+.footer {
+	height: 150px;
+	background-color: #191D3A;
+	padding: 20px 0;
+	color:#6C6E7E;
+}
+.footer p {
+	line-height: 50px;
+}
+.footer p a{
+	color:#6C6E7E;
+}
+.footer p a:hover {
+	color: #fff;
+}
+.footer p a.govicon img{
+	width: 40px;
+}
+/*top按钮*/
+.gotop {
+	display: block;
+	width: 68px;
+	height: 30px;
+	position: fixed;
+	bottom: 75px;
+	right:15px;
+	background: url(../images/top.png) no-repeat 0 -40px;
+}
+.gotop:hover {
+	background: url(../images/top.png) no-repeat;
+}
