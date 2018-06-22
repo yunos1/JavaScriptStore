@@ -1,0 +1,86 @@
+				.about {
+					background-color: #252947;
+				}
+				.about_nav{
+					width: 1366px;
+					height: 254px;
+					background: url(../img/aboutbanner.jpg);
+				}
+							.about_top{
+								width: 1000px;
+								height: 43px;
+								border-bottom: 1px solid gray;
+								margin-top: 20px;
+								margin-left: 150px;
+								
+							}
+							.abouttop_left{
+								width: 200px;
+								display: inline-block;
+								font-size: 22px;
+								font-weight: bold;
+							}
+							.about_top .about_icon{
+								display: inline-block;
+								width: 23px;
+								height: 16px;
+								background:  url(../img/location.png) 0 -100px no-repeat;
+							}
+							.about_top .about_text{
+								display: inline-block;
+				
+							}
+							.abouttop_right{
+								display: inline-block;
+								float: right;
+								margin-top: 6px;
+							}
+				
+							.abouttop_right ul{
+								list-style: none;
+							}
+							.abouttop_right ul li{
+								margin-left: 10px;
+								float: right;
+								
+							}
+							.abouttop_right .home{
+								display: inline-block;
+								width: 15px;
+								height: 13px;
+								background: url(../img/home.png);
+							}
+							.abouttop_right .next{
+								display: inline-block;
+								width: 3px;
+								height: 8px;
+								background: url(../img/arrow.png);
+							}
+							
+							
+							
+							
+							.about_mid_left{
+								width: 280px;
+								height: 500px;
+								display: inline-block;
+								margin: 10px 10px 10px 150px;
+							}
+							.about_mid_left ul li{
+								margin: 20px 5px;
+								padding-bottom: 20px;
+								font-weight: bold;
+								font-size: 16px;
+								border-bottom: 1px solid darkgray;
+							}
+							
+							.about_mid_right{
+								width: 900px;
+								height: 600px;
+								float: right;
+							}
+							.about_mid_right p{
+								font-size: 15px;
+							
+								margin: 30px 0 30px 0;
+							}

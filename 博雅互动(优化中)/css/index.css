@@ -1,73 +1,6 @@
-			*{
-				margin: 0;
-				padding: 0;
-			}
-			.container{
-				position: absolute;
-			}
-			
-			.header {
-				width: 100%;
-				height: 70px;
-				background-color: #191D3A;
-			}
-			
 			.index {
 				background-color: #252947;
 			}
-			
-			.logo {
-				margin: 12px 0 0 100px;
-				float: left;
-			}
-			
-			ul {
-				list-style: none;
-			}
-			
-			.nav_ul li {
-				line-height: 70px;
-				text-align: center;
-				float: left;
-				width: 100px;
-				border-left: 1px solid #252947;
-			}
-			
-			a {
-				text-decoration: none;
-				color: #818496;
-			}
-			
-			.header ul li a:hover {
-				color: #e2e4ed;
-			}
-			
-			.joinus {
-				display: inline-block;
-				margin: 0 0 0 12px;
-				height: 34px;
-				line-height: 2;
-				width: 98px;
-				border: 1px solid #3aca7a;
-				border-radius: 3px;
-				background-color: #38b774;
-				font-size: 1em;
-				color: #fff;
-			}
-			
-			.changelang {
-				float: right;
-				margin: 25px 100px 0 0;
-			}
-			
-			#chinese {
-				color: #2ba364;
-			}
-			
-			#english:hover {
-				color: #2ba364;
-			}
-			
 			/*
 			 	1920 * 420
 			 * */
@@ -396,42 +329,4 @@
 			}
 			
 			
-			.footer {
-				clear: both;
-				width: 100%; 
-				height: 200px;
-				background-color: #191D3A;
-				margin-top: 50px;
-				
-			}
 			
-			.footer ul li{
-				margin-left: 100px;
-				margin-top: 30px;
-			}
-			#map{
-				padding-top: 30px;
-			}
-			
-			.huiz {
-				width: 60px;
-				height: 60px;
-				position: relative;
-				float: right;
-				bottom: 45px;
-				right: 200px;
-			}
-			
-			.top {
-				width: 68px;
-				height: 29px;
-				position: fixed;
-				top: auto;
-				left: auto;
-				right: 30px;
-				bottom: 100px;
-				background: url(../img/top.png) no-repeat 0 -40px;
-			}
-			.top:hover{
-				background-position: 0 0;
-			}

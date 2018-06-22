@@ -1,0 +1,13 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+
+.container{
+	margin: 100px auto;
+	width: 500px;
+	height: 500px;
+	text-align: center;
+	
+}

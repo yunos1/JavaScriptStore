@@ -1,0 +1,127 @@
+						
+						
+						.news {
+							background-color: #252947;
+						}
+						
+						.news_nav{
+							width: 1366px;
+							height: 254px;
+							background: url(../img/newsbanner.jpg);
+						}
+						
+						.news_top{
+							width: 1000px;
+							height: 43px;
+							border-bottom: 1px solid gray;
+							margin-top: 20px;
+							margin-left: 150px;
+							
+						}
+						.newstop_left{
+							width: 200px;
+							display: inline-block;
+							font-size: 22px;
+							font-weight: bold;
+						}
+						.news_top .news_icon{
+							display: inline-block;
+							width: 23px;
+							height: 16px;
+							background:  url(../img/location.png) 0 -100px no-repeat;
+						}
+						.news_top .news_text{
+							display: inline-block;
+			
+						}
+						.newstop_right{
+							display: inline-block;
+							float: right;
+							margin-top: 6px;
+						}
+			
+						.newstop_right ul{
+							list-style: none;
+						}
+						.newstop_right ul li{
+							margin-left: 10px;
+							float: right;
+							
+						}
+						.newstop_right .home{
+							display: inline-block;
+							width: 15px;
+							height: 13px;
+							background: url(../img/home.png);
+						}
+						.newstop_right .next{
+							display: inline-block;
+							width: 3px;
+							height: 8px;
+							background: url(../img/arrow.png);
+						}
+						
+						
+						
+						
+						
+						
+						.news_mid_left{
+							width: 750px;
+							height: 590px;
+							margin-top: 20px;
+							margin-left: 150px;
+							display: inline-block;
+							border-bottom: 1px solid darkgray;
+						}
+						.news_mid_left span{
+							margin: 5px 10px 5px 20px;
+							display: inline-block;
+							font-size: 15px;
+						}
+						
+						.pic_new1{
+							width: 660px;
+							height:441px ;
+							margin-left: 50px;
+							background: url(../img/66.png);
+						}
+						#new_news{
+							color: #33B972;
+						}
+						#new_title{
+							font-weight: bold;
+						}
+						#news_p{
+							font-size: 15px;
+							margin: 10px 5px 10px 5px;
+						}
+						#p_more{
+							color: #33B972;
+						}
+						.news_mid_right{
+							width: 380px;
+							height: 200px;
+							
+							float: right;
+							margin-top: 20px;
+						}
+					    .news_mid_right p{
+			
+							font-size: 15px;
+						}
+						.pic_new2{
+							width: 253px;
+							height: 149px;
+							background: url(../img/77.png);
+						}
+						
+						
+						.newtitle{
+							margin-left: 150px;
+						}
+						.newtitle ul li{
+							margin: 25px 5px;
+							font-size: 15px;
+							font-weight: bold;
+						}

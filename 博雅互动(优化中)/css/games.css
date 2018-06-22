@@ -1,75 +1,12 @@
-			*{
-				margin: 0;
-				padding: 0;
-			}
-			.container{
-				position: absolute;
-			}
 			
-			.header {
-				width: 1366px;
-				height: 70px;
-				background-color: #191D3A;
-			}
 			
 			.games {
 				background-color: #252947;
 			}
 			
-			.logo {
-				margin: 12px 0 0 100px;
-				float: left;
-			}
-			
-			ul {
-				list-style: none;
-			}
-			
-			.nav_ul li {
-				line-height: 70px;
-				text-align: center;
-				float: left;
-				width: 100px;
-				border-left: 1px solid #252947;
-			}
-			
-			a {
-				text-decoration: none;
-				color: #818496;
-			}
-			
-			.header ul li a:hover {
-				color: #e2e4ed;
-			}
-			
-			.joinus {
-				display: inline-block;
-				margin: 0 0 0 12px;
-				height: 34px;
-				line-height: 2;
-				width: 98px;
-				border: 1px solid #3aca7a;
-				border-radius: 3px;
-				background-color: #38b774;
-				font-size: 1em;
-				color: #fff;
-			}
-			
-			.changelang {
-				float: right;
-				margin: 25px 100px 0 0;
-			}
-			
-			#chinese {
-				color: #2ba364;
-			}
-			
-			#english:hover {
-				color: #2ba364;
-			}
 			.game_nav{
 				width: 1366px;
-				height: 230px;
+				height: 254px;
 				background: url(../img/gamebanner.jpg);
 			}
 			.game_top{
@@ -83,6 +20,8 @@
 			.gametop_left{
 				width: 200px;
 				display: inline-block;
+				font-size: 22px;
+				font-weight: bold;
 			}
 			.game_top .game_icon{
 				display: inline-block;
@@ -106,6 +45,7 @@
 			.gametop_right ul li{
 				margin-left: 10px;
 				float: right;
+				
 			}
 			.gametop_right .home{
 				display: inline-block;
@@ -119,15 +59,123 @@
 				height: 8px;
 				background: url(../img/arrow.png);
 			}
+			
+			
+			
+			
+			
+			/* 左内容 */
 			.game_left{
 				width: 200px;
 				height: 400px;
 				margin-left: 150px;
 				margin-top: 30px;
-				background-color: green;
+				display: inline-block;
 			}
+			.game_left ul li{
+				margin-top: 20px;
+				padding: 10px;
+				border-bottom: 1px grey solid;
+			}
+			
+			#iphone1{
+				width: 31px;
+				height: 36px;
+				display: inline-block;
+				background: url(../img/pad.png) no-repeat;
+			}
+			
+			#iphone1:hover{
+				background: url(../img/pad.png) no-repeat -124px 0;
+			}
+			#android1{
+				width: 33px;
+				height: 39px;
+				display: inline-block;
+				background: url(../img/pad.png) no-repeat -4px -98px;
+			}
+			#android1:hover{
+				background: url(../img/pad.png) no-repeat -122px -98px;
+			}
+			#ipad1{
+				width: 27px;
+				height: 38px;
+				display: inline-block;
+				background: url(../img/pad.png) no-repeat 0 -199px;
+			}
+			#ipad1:hover{
+				background: url(../img/pad.png) no-repeat -121px -199px;
+			}
+			#pc1{
+				width:34px ;
+				height: 28px;
+				display: inline-block;
+				background: url(../img/pad.png) no-repeat 0 -300px;
+			}
+			#pc1:hover{
+				background: url(../img/pad.png) no-repeat -120px -300px;
+			}
+			#tv1{
+				width:42px ;
+				height: 29px;
+				display: inline-block;
+				background: url(../img/pad.png) no-repeat 0 -507px;
+			}
+			#tv1:hover{
+				background: url(../img/pad.png) no-repeat -120px -507px;
+			}
+			.game_left ul li span{
+				font-size: 20px;
+				padding-left: 20px;
+			}
+	
 			.game_right{
-				width: 800px;
-				height: 400px;
-				
+				width: 950px;
+				height: 1100px;
+				margin-top: 40px;
+				float: right;
 			}
+			.pic_1{
+				width:380px;
+				height: 320px;
+				border: 1px solid darkgray;
+				border-radius: 5px;
+				background: #CAD6E1;
+				display: inline-block;
+				margin: 10px 10px 20px 10px;
+			}
+			.pic_1 .text_pic{
+				font-size: 18px;
+				text-align: center;
+			}
+			
+			.pic_11{
+				width:331px;
+				height: 195px;
+				background: url(../img/p1.jpg);
+				margin:10px 0 10px 25px;
+			}
+			.pic_111{
+				width: 31px;
+				height: 36px;
+				display: inline-block;
+				background: url(../img/pad.png) no-repeat;
+			}
+			
+			.pic_112{
+				width: 40px;
+				height: 40px;
+				display: inline-block;
+				background: url(../img/landlords80.png) no-repeat;
+			}
+			.pic_1 ul li{
+				float: left;
+				
+				margin:10px 35px 0 10px;
+				padding-left: 20px;
+			}
+			.pic_1 ul li span{
+				display: inline-block;
+				font-size: 17px;
+			}
+			
