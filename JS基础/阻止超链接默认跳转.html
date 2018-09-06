@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	
+	<!-- 
+	 
+		关键是 return false;
+	 -->
+	
+	 <!--方法一 -->
+	 <a href="http://www.baidu.com" onclick="alert('haha');return false">haha</a>
+	 <!-- 方法二-->
+	 
+	 <a href="http://www.baidu.com" onclick="return f1();">haha</a>
+	<script>
+		function f1(){
+			alert('hehe');
+			return false;
+		}
+	</script>
+	 <a href="http://www.baidu.com" id="a1">haha</a>
+	
+	
+	<script>
+		//return false;
+		
+		document.getElementById('a1').onclick = function(){
+			alert('hehe');
+			return false;
+		}
+		
+	</script>
+</body>
+</html>

@@ -4,10 +4,28 @@
 	
 }
 
-.container{
+#container{
 	margin: 100px auto;
 	width: 500px;
 	height: 500px;
 	text-align: center;
+	position: relative;
 	
+}
+#content{
+	position: absolute;
+	width: 500px;
+	height: 100px;
+}
+#content1{
+	position: absolute;
+	width: 500px;
+	height: 100px;
+	margin-top:50px;
+}
+#content2{
+	position: absolute;
+	width: 500px;
+	height: 100px;
+	margin-top: 100px;
 }
