@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	
+	<style type="text/css">
+		#div1{
+			width: 200px;
+			height: 300px;
+			border: 2px solid red;
+		}
+		li{
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	
+	
+	<input type="button" id="bt" value="添加" />
+	<div id="div1"></div>
+	<script type="text/javascript">
+		var kungfu = ['九阴白骨爪','九阴真经','化骨绵掌','降龙十八掌','葵花宝典','太极','八卦阵'];
+		
+		var bt = document.getElementById("bt");
+		var div = document.getElementById("div1");
+	/* 	bt.addEventListener('click',function(){
+			var ulobj  = document.createElement('ul');
+			div.appendChild(ulobj);
+		}) */
+		
+		bt.onclick = function(){
+			var ulobj  = document.createElement('ul');
+			div.appendChild(ulobj);
+			
+			for(var i = 0;i<kungfu.length;i++){
+				var liobj = document.createElement('li');
+				ulobj.appendChild(liobj);
+				liobj.innerHTML = kungfu[i];
+				
+				liobj.onmouseover = f1;
+				liobj.onmouseout = f2;
+			}
+		}
+		
+		function f1(){
+			this.style.backgroundColor = 'red';
+		}
+		
+		function f2(){
+			this.style.backgroundColor = '';
+		}
+			
+		
+	</script>
+</body>
+</html>

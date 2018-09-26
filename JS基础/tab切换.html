@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			width: 500px;
+			height: 500px;
+			margin: 100px auto;
+			border: 1px solid black;
+		}
+		span{
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+			background-color: greenyellow;
+			color: black;
+		}
+		li{
+			width: 500px;
+			height: 400px;
+			display: none;
+			background-color: greenyellow;
+			color: black;
+			list-style: none;
+		}
+		
+		.current{
+			background-color: red;
+			
+		}
+		.currentblock{
+			display: block;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="hd">
+			<span class="current">新闻</span>
+			<span>娱乐</span>
+			<span>游戏</span>
+			<span>冒险</span>
+		</div>
+		<div class="dd">
+			<ul>
+				<li class="currentblock">这是新闻版块</li>
+				<li>这是娱乐版块</li>
+				<li>这是游戏版块</li>
+				<li>这是冒险版块</li>
+			</ul>
+		</div>
+	</div>
+	
+	<script>
+		
+		var list = document.getElementsByTagName('span');
+		var listli = document.getElementsByTagName('li');
+		
+		for(var i = 0;i<list.length;i++){
+			
+			list[i].setAttribute('index',i);
+			
+			list[i].onclick = function (){
+				
+				var num = this.getAttribute('index');
+				
+				for(var j= 0 ;j<list.length;j++){
+					list[j].className = '';
+					
+				}
+				
+				this.className = 'current';
+				
+				
+				 for(var k = 0;k<listli.length;k++){
+					listli[k].className = '';
+					
+				} 
+				listli[num].className = 'currentblock';
+				
+			
+			}
+			
+			
+		}
+	</script>
+	
+</body>
+</html>

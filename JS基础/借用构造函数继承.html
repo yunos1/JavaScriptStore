@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		
+		function Person(name,age,sex,weight){
+			this.name = name;
+			this.age = age;
+			this.sex = sex;
+			this.weight = weight;
+		}
+		Person.prototype.eat = function(){
+			console.log("eating");
+		}
+		function Student(name,age,sex,weight,score){
+			Person.call(this,name,age,sex,weight);
+			
+			this.score = score;
+			
+		}
+		//Student.prototype = new Person();
+		
+		Student.prototype.study = function(){
+			console.log("studing");
+		}
+		var s = new Student('张三',18,'男','57kg',100);
+		console.log(s.name,s.age,s.sex,s.weight,s.score);
+		s.study();
+		
+		//使用构造函数.call()来继承时
+		//只继承属性,方法不会被子类继承
+		//如果要解决这个问题,要使用组合继承
+		//s.eat();
+		
+	</script>
+</body>
+</html>
