@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			var obj1 = {
+				name: '小灰灰',
+				age: 18,
+				eat: function() {
+					console.log("eating");
+				}
+			};
+
+			//改变了地址的指向,相当于下面代码
+			var obj2 = obj1;
+
+			/* 
+			 
+			var obj2 = {}
+			for(var key in obj1){
+				obj2[key] = obj1[key];
+			}
+			 
+			 */
+			console.log(obj2.name, obj2.age);
+			obj2.eat();
+
+
+
+			//下面的才是真正的拷贝继承
+			function Person() {
+				
+
+			}
+			Person.prototype.name = '张三';
+			Person.prototype.age = 18;
+			Person.prototype.sex = '男';
+
+			Person.prototype.eat = function() {
+				console.log('eating');
+			}
+
+			var obj = {}
+
+			for (var key in Person.prototype) {
+				obj[key] = Person.prototype[key];
+			}
+			
+			console.log(obj.name);
+		</script>
+	</body>
+</html>
