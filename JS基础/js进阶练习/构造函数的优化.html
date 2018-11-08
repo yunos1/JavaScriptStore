@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Person(name,age,sex){
+			this.name = name;
+			this.age = age;
+			this.sex = sex;
+			//this.sayName = fun;
+			this.sayName = function(){
+				alert("My Name is"+this.name);
+			}
+		}
+		//尽量不要在全局作用域中定义   解决办法在原型对象.HTML中
+		// function fun() {
+			// alert("My Name is"+this.name);
+		// }
+		var pr = new Person("张三",18,"男");
+		var pr1 = new Person("李四",19,"男");
+		
+		//pr.sayName();
+		console.log(pr.sayName == pr1.sayName);
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul{
+				background-color: yellowgreen;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				
+				var ul = document.getElementById("u1");
+				var bt = document.getElementById("bt");
+				bt.onclick = function(){
+					var li = document.createElement("li");
+					li.innerHTML = "<a href='javascript:;' class='link'>我是a标签</a>"
+					ul.appendChild(li);
+					
+				};
+				
+				var Alla = document.getElementsByTagName("a");
+				
+				ul.onclick = function(event){
+					event = event || window.event;
+					if(event.target.className == "link"){						
+						alert("点击啦");
+					}
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<button id="bt">添加</button>
+		<ul id="u1">
+			<li><a href="javascript:;" class="link">我是a标签</a></li>
+			<li><a href="javascript:;" class="link">我是a标签</a></li>
+			<li><a href="javascript:;" class="link">我是a标签</a></li>
+			<li><a href="javascript:;" class="link">我是a标签</a></li>
+		</ul>
+	</body>
+</html>

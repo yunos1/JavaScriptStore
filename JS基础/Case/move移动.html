@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-color: #FF0000;
+		}
+		#vr{
+			margin-left: 1000px;
+			height: 600px;
+			border: 1px solid #7FFFD4;
+		}
+		
+	</style>
+	<script src="js/tool.js"></script>
+	<script>
+		window.onload = function(){
+			var bt = document.getElementById("bt")
+			var box = document.getElementById("box")
+			bt.onclick = function(){
+				move(box,"left",1000,20,function(){
+					//alert("执行完毕！")
+				})
+			}
+		}
+	</script>
+</head>
+<body>
+	<button id="bt">button</button>
+	<div id="box">
+		
+	</div>
+	<div id="vr">
+		
+	</div>
+</body>
+</html>

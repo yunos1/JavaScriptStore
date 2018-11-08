@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				var bt = document.getElementById("bt1");
+				
+				/*
+				 addEventListener()
+				 * 通过这个方法可以为元素绑定响应函数
+				 * -参数
+				 * 		1.事件的字符串，不要on
+				 * 		2.回调函数，当事件触发时该函数会被调用
+				 * 		3.是否在捕获阶段触发事件，需要一个布尔值，一般都传false
+				 * 使用addEventListener()可以同时为一个元素的相同事件同时绑定多个响应函数
+				 * 这样当事件被触发时，响应函数将会按照函数的绑定顺序执行
+				 * 
+				 * 这个方法不支持ie8及以下的浏览器
+				 * */
+				/*bt.addEventListener("click",function(){
+					alert(1);
+				},false);
+				bt.addEventListener("click",function(){
+					alert(2);
+				},false);
+				bt.addEventListener("click",function(){
+					alert(3);
+				},false);*/
+				
+				
+				/*
+				 
+				 * attachEvent()
+				 * -在ie8 可以使用attachEvent()来绑定事件
+				 * -参数
+				 * 		1.事件的字符串，需要on
+				 * 		2.回调函数
+				 * 执行顺序与addEventListener()相反
+				 * 
+				 * 
+				 * */
+			/*	
+				bt.attachEvent("onclick",function(){
+					alert(1);
+				});
+				bt.attachEvent("onclick",function(){
+					alert(2);
+				});
+				bt.attachEvent("onclick",function(){
+					alert(3);
+				});*/
+				
+				
+				bind(bt,"click",function(){
+					alert(1);
+				});
+				
+				
+				
+				//定义一个函数，用来为指定元素绑定响应函数
+				
+				/* addEventListener()中的this，是绑定事件的对象
+				 * attachEvent()中的this，是window
+				 * 需要统一两个方法中的this
+				 * 
+				 * 
+				 
+				 * 参数
+				 * 	-obj 要绑定事件的对象
+				 * 	-eventStr 事件的字符串
+				 * 	-callback 回调函数
+				 * */
+				function bind(obj,eventStr,callback){
+					if(obj.addEventListener){
+						/*
+						 
+						 * 普通的浏览器
+						 * */
+						obj.addEventListener(eventStr,callback,false);
+					}else{
+						
+						/*IE8及以下
+						 this是谁由调用方式决定
+						 callback.call(obj)
+						 * */
+						obj.attachEvent("on"+eventStr ,function(event){
+							//在匿名函数中调用回调函数
+							event.call(obj);
+						});
+					}
+					
+				}
+				
+			};
+		</script>
+	</head>
+	<body>
+		<button id="bt1">
+			点击
+		</button>
+	</body>
+</html>

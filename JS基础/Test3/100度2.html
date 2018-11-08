@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.AB,.CD,.E,.F{
+				width:500px;
+				height: 350px;
+				border: 1px solid lightgray;
+				background: white;
+				border-radius: 15px;
+				position: relative;
+			}
+			.a1,.c1,.e1,.f1{
+				color: red;
+				display: inline-block;
+				position: absolute;
+				top: 20px;
+				left: 20px;
+			}
+			.a2,.c2,.e2,.f2{
+				color: black;
+				display: inline-block;
+				position: absolute;
+				top: 20px;
+			}
+			.a2{
+				left: 200px;
+			}
+			.c2{
+				left: 63px;
+			}
+			.e2{
+				left: 70px;
+			}
+			.f2{
+				left: 175px;
+			}
+			.a34,.c34,.f34{
+				display: inline-block;
+				position: absolute;
+				top: 16px;
+				right: 16px;	
+			}
+			
+			
+			.b1234{
+				width: 500px;
+				height: 300px;
+				border: 1px solid transparent;
+			}
+			.b1,.b2,.b3,.b4{
+				position: relative;
+				left: 20px;
+			}
+			.b1{
+				top: 40px;
+			}
+			.b2{
+				top: 80px;
+			}
+			.b3{
+				top: 120px;
+			}
+			.b4{
+				top: 160px;
+			}
+			.b1 span{
+				position: absolute;
+				top: 10px;
+				left: 90px;
+			}
+			.b2 span{
+				position: absolute;
+				top: 10px;
+				left:90px;
+			}
+			.b3 span{
+				position: absolute;
+				top: 10px;
+				left: 95px;
+			}
+			.b4 span{
+				position: absolute;
+				top: 10px;
+				left: 90px;
+			}
+			
+			.d1{
+				width: 78px;
+				height: 78px;
+				background: red;
+				color: white;
+				position: absolute;
+				top: 50px;
+				left: 5px;
+			}
+			.d2,.d3,.d4,.d5,.d6,.d7,.d8,.d9,.d10,.d11{
+				position: absolute;
+			}
+			.d2{
+				top: 50px;
+				left: 85px;	
+				background-size: 100% 100%;
+			}
+			.d3{
+				top: 50px;
+				left: 165px;	
+			}
+			.d4{
+				top: 130px;
+				left: 5px;	
+			}
+			.d5{
+				top: 130px;
+				left: 85px;	
+			}
+			.d6{
+				top: 130px;
+				left: 165px;	
+			}
+			.d7{
+				top: 130px;
+				left: 245px;	
+			}
+			.d8{
+				top: 210px;
+				left: 5px;
+			}
+			.d9{
+				top: 210px;
+				left: 85px;
+			}
+			.d10{
+				top: 210px;
+				left: 165px;
+			}
+			.d11{
+				top: 210px;
+				left: 245px;
+			}
+			.e3,.e4,.e5,.e6,.e7{
+				position: absolute;
+				display: inline-block;
+			}
+			.e3{
+				top: 60px;
+				left: 25px;
+				right: 25px;
+			}
+			.e4{
+				top: 150px;
+				left: 30px;
+				color: red;
+			}
+			.e5{
+				top: 150px;
+				right: 60px;
+				color: gray;
+			}
+			.e6{
+				bottom: 20px;
+				left: 20px;
+			}
+			.e7{
+				bottom: 20px;
+				right: 60px;
+			}
+			.e6,.e7 li{
+				color: red;
+			}
+			.f5,.f6,.f7{
+				width: 100px;
+				height: 30px;
+				border: 1px solid lightblue;
+				border-radius: 5px;
+				text-align: center;
+				line-height: 30px;
+				background: light;
+			}
+			
+			.f5{
+				top: 50px;
+				left: 15px;	
+			}
+			.f5:hover{
+				border-bottom: none;
+			}
+			.f6{
+				top: 50px;
+				left: 115px;	
+			}
+			.f7{
+				top: 50px;
+				left: 215px;
+			}
+			.f8{
+				top: 95px;
+				left: 120px;
+				color: grey;
+			}
+			.f5,.f6,.f7,.f8,.f9,.f10,.f11,.f12{
+				position: absolute;
+				display: inline-block;
+			}
+			.f9{
+				top: 95px;
+				right: 28px;
+				color: grey;	
+			}
+			.f10 li{			
+				color: red;	
+				margin: 5px;
+			}
+			.f10{
+				top: 115px;
+				left: 0px;
+			}
+			.f11{
+				top: 260px;
+				left: 20px;
+			}
+			.f12{
+				top: 260px;
+				left: 290px;
+			}
+			.f13,.f14,.f15,.f16,.f17{
+				position: absolute;
+				display: inline-block;
+				left: 285px;	
+			}
+			.f13{	
+				top: 128px;
+			}
+			.f14{
+				top: 153px;
+			}
+			.f15{
+				top: 178px;
+			}
+			.f16{
+				top: 203px;
+			}
+			.f17{
+				top: 223px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="AB">
+				<div class="a1">
+				<strong>100DU IN THE MEDIA </strong>
+			</div>
+				<div class="a2">
+				<strong>媒体声音 </strong>	
+			</div>
+				<div class="a34">
+				<img src="../../img/100度/Lmore.png"/>
+			</div>		
+			<br />
+			
+			<div class="b1234">
+				<div class="b1">
+				<img src="../../img/100度/Lb1.png"/>
+				<span >日本最大的财经杂志《钻石周刊》对100度享乐网的报道</span>
+			</div>
+			
+				<div class="b2">
+				<img src="../../img/100度/Lb2.png"/>
+				<span >视频网站100度享乐网获网络视听许可证</span>	
+			</div>
+			
+				<div class="b3">
+				<img src="../../img/100度/Lb3.png"/>
+				<span >互联网上的视频橱窗</span>	
+			</div>
+			
+				<div class="b4">
+				<img src="../../img/100度/Lb4.png"/>
+				<span >享乐主义的机会</span>	
+			</div>	
+				
+			</div>		
+		</div>
+		
+		
+		<div class="CD">
+			<div class="c1">
+				<strong>HOT </strong>
+			</div>
+				<div class="c2">
+				<strong>红人烧客 </strong>	
+			</div>
+				<div class="c34">
+				<img src="../../img/100度/Lmore.png"/>
+			</div>	
+			<div class="d1">
+				<b>HOT</b><br />
+				<span style="font-size: 15px;">潮流服饰<br />任我行</span>
+				
+			</div>
+			
+			<div class="d2"><img src="../../img/100度/L2.png"/></div>
+			<div class="d3"><img src="../../img/100度/L3.png"/></div>
+			<div class="d4"><img src="../../img/100度/L4.png"/></div>
+			<div class="d5"><img src="../../img/100度/L5.png"/></div>
+			<div class="d6"><img src="../../img/100度/L6.png"/></div>
+			<div class="d7"><img src="../../img/100度/L7.png"/></div>
+			<div class="d8"><img src="../../img/100度/L8.png"/></div>
+			<div class="d9"><img src="../../img/100度/L9.png"/></div>
+			<div class="d10"><img src="../../img/100度/L10.png"/></div>
+			<div class="d11"><img src="../../img/100度/L11.png"/></div>
+			
+			</div>
+		
+		<div class="E">
+			<div class="e1">
+				<strong>HELP </strong>
+			</div>
+				<div class="e2">
+				<strong>在线帮助</strong>	
+			</div>
+			<div class="e3">
+				<p style="text-indent: 2em;font-size: 18px;">您有任何问题，都可以通过全国免费电话，或MSN在线客服与我们联系！</p>
+			</div>
+			<div class="e4">
+				<img src="../../img/100度/电话.png"/> <b>4006-100-516</b>
+			</div>	
+			<div class="e5">
+				<img src="../../img/100度/MSN.png"/> <span style="font-size: 9px;">100du.com@live.cn</span>
+				
+			</div>
+			<div class="e6">
+			<ul>
+				<b style="color: black;font-size: 13px;">用户帮助</b>
+ 				<li><span style="color: black;font-size: 13px;">金币是什么</span></li>
+ 				<li><span style="color: black;font-size: 13px;">怎样查看我的等级</span></li>
+ 				<li><span style="color: black;font-size: 13px;">怎样赚积分</span></li>
+ 			</ul>
+			</div>
+			<div class="e7">
+			<ul>
+				<b style="color: black;font-size: 13px;">商户帮助</b>
+ 				<li><span style="color: black;font-size: 13px;">如何成为明星商户</span></li>
+ 				<li><span style="color: black;font-size: 13px;">邮件推广</span></li>
+ 				<li><span style="color: black;font-size: 13px;">论坛推广方法</span></li>
+ 			</ul>
+			</div>	
+		</div>
+		
+		
+		<div class="F">
+				<div class="f1">
+				<strong>LIFESTYLE ADVICE </strong>
+			</div>
+				<div class="f2">
+				<strong>知道分子 </strong>	
+			</div>
+				<div class="f34">
+				<img src="../../img/100度/Lmore.png"/>
+			</div>		
+				<div class="f5">
+					<b style="font-size: 14px;">有人在问</b>
+				</div>
+				<div class="f6">
+					<span style="font-size: 14px;">有人知道</span>
+				</div>
+				<div class="f7">
+					<span style="font-size: 14px;">热门问题</span>
+				</div>
+				<div class="f8">
+					<span style="font-size: 13px;">标题</span> 
+				</div>
+				<div class="f9">
+					<span style="font-size: 13px;">状态</span>	
+				</div> 
+				<div class="f10">
+				<ul>
+				<li style="border-top: 1px dashed grey ;font-size: 13px; width: 260px;"><span style="">[美食]</span><span style="color: black;">推荐几款性价比比较好的冰箱...</span></li> 
+				<li style="border-top: 1px dashed grey ;font-size: 13px; width: 260px;"><span style="">[购物]</span><span style="color: black;">生活中哪些商品的包装有缺陷</span></li>
+				<li style="border-top: 1px dashed grey ;font-size: 13px; width: 260px;"><span style="">[休闲]</span><span style="color: black;">为什么我第一次进入保姆和宠物</span></li>
+				<li style="border-top: 1px dashed grey ;font-size: 13px; width: 260px;"><span style="">[美食]</span><span style="color: black;">推荐几款性价比比较好的冰箱...</span></li>
+				<li style="border-top: 1px dashed grey ;border-bottom:1px dashed grey; font-size: 13px; width: 260px;"><span style="">[购物]</span><span style="color: black;">生活中哪些商品的包装有缺陷</span></li>
+				</ul>
+				</div>
+				<div class="f11">
+					<b style="font-size: 14px;color: gray;">搜搜谁知道:</b> <input type="text" placeholder="输入关键字"/> 
+				</div>
+				<div class="f12">
+					<img src="../../img/100度/Lgo.png"/>
+				</div>
+				<div class="f13"><img src="../../img/100度/勾.png"/></div>
+				<div class="f14"><img src="../../img/100度/旗子.png"/></div>
+				<div class="f15"><img src="../../img/100度/勾.png"/></div>
+				<div class="f16"><img src="../../img/100度/旗子.png"/></div>
+				<div class="f17"><img src="../../img/100度/旗子.png"/></div>
+		</div>	
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#container{
+			height: 477px;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+			border:1px solid #ccc ;
+		}
+		img{
+			position: absolute;
+			left: 0;
+			display: block;
+			border: 1px solid #ccc;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var box = document.getElementById("container");
+			var imgArr = document.getElementsByTagName("img");
+			var imgWidth = imgArr[0].offsetWidth;
+			var exposeWidth = 160;
+			box.style.width = imgWidth + (imgArr.length -1)* exposeWidth + 'px';
+			function getposition(){
+				for(var i = 1;i<imgArr.length;i++){
+					imgArr[i].style.left = imgWidth + (i - 1) * exposeWidth + 'px';
+				}
+			}
+			getposition();
+			var translate = imgWidth - exposeWidth;
+			for(var i = 0;i<imgArr.length;i++){
+				(function(i){
+					imgArr[i].onmouseover = function(){
+						getposition();
+						for(var j = 1;j<=i;j++){
+							imgArr[j].style.left = parseInt(imgArr[j].style.left) - translate + 'px';
+						}
+					}
+				})(i);
+			}
+		};
+	</script>
+</head>
+<body>
+	<div id="container">
+		<img src="img/door1.png" alt="">
+		<img src="img/door2.png" alt="">
+		<img src="img/door3.png" alt="">
+		<img src="img/door4.png" alt="">
+	</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.number{
+			width: 100px;
+			height: 30px;
+		}
+		
+	</style>
+	<script>
+		window.onload = function(){
+			
+			var numArr = ["A","B","C","D","E"]
+			
+			
+			var num2 = document.getElementById("result")
+			
+			//alert(num1)
+			var bt = document.getElementById("bt")
+				clearInterval(timer)
+				var timer = setInterval(function(){
+					var num1 = document.getElementById("input").value
+					bt.onclick = function(){
+						switch(num1){
+					
+					case '1':
+						num2.value = numArr[0]
+						break
+					case '2':
+						num2.value = numArr[1]
+						break
+					case '3':
+						num2.value = numArr[2]
+						break
+					case '4':
+						num2.value = numArr[3]
+						break
+					case '5':
+						num2.value = numArr[4]
+						break
+					 default:
+						num2.value = ""
+						alert("error")
+				}
+					}	
+				},20)
+				
+			
+		}
+		
+		
+	</script>
+</head>
+<body>
+	<form action="post" >
+		<input type="text" class="number" id="input">
+		<input type="button" value="查询" id="bt">
+		<input type="text" class="number" id="result">
+	</form>
+</body>
+</html>

@@ -1,0 +1,56 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+h1{
+	text-align: center;
+}
+a{
+	text-decoration: none;
+}
+.hr1{
+	border: 1px solid #FF0000;
+}
+.content{
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 950px;
+	height: 700px;
+	text-align: center;
+	position: relative;
+}
+.u1{
+	list-style: none;  /*设置ul属性的前面样式*/
+}
+.l1{
+	float: left;
+	display: inline;
+	position: relative;
+}
+.pic1{
+	border: 3px solid grey;
+	margin-left: 10px;
+	width: 200px;
+	height: 200px;
+}
+.u1 a:hover .pic{
+	width: 330px;
+	height: 250px;
+	position: absolute;
+	display: block;
+	top: -20px;
+	left: -50px;
+	z-index: 1;
+}
+.pic{
+	display: none;
+}
+
+.pic2{
+	width: 200px;
+	height: 200px;
+	transition: 2s;
+}
+.pic2:hover{
+	transform: scale(2,2);
+}

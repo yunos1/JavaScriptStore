@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.container{
+			width: 800px;
+			height: 100px;
+			margin: 0 auto;
+		}
+		ul{
+			margin: 0px;
+			padding: 0px;
+		}
+		ul li{
+			height: 30px;
+			width: 100px;
+			border: 1px solid gray;
+			list-style: none;
+			float: left;
+			display: inline;
+			background-color: aquamarine;
+			text-align: center;
+		}
+		a{
+			text-decoration: none;
+			background-color: aquamarine;
+		}
+		ul li ul{
+			margin-top: 10px;
+			display: none;
+		}
+		ul li:hover ul{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<ul>
+			<li><a href="#">文学院</a></li>
+			<li><a href="#">体育学院</a></li>
+			<li><a href="#">计科学院</a>
+				<ul>
+					<li><a href="#">软件开发</a></li>
+					<li><a href="#">软件测试</a></li>
+					<li><a href="#">软件工程</a></li>
+					<li><a href="#">前台编程</a></li>
+				</ul>
+			</li>
+			<li><a href="#">教育学院</a>
+				<ul>
+					<li><a href="#">语文</a></li>
+					<li><a href="#">数学</a></li>
+					<li><a href="#">英语</a></li>
+					<li><a href="#">政治</a></li>
+				</ul>
+			</li>
+			<li><a href="#">化学院</a></li>
+			<li><a href="#">数码学院</a></li>
+			<li><a href="#">城环学院</a></li>
+		</ul>
+		</div>
+</body>
+</html>

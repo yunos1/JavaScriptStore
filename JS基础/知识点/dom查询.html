@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style type="text/css" media="screen">
+		.top{
+			width: 400px;
+			height: 300px;
+			border: 1px solid gray;
+			display: inline-block;
+		}
+		ul{
+			list-style: none;
+
+		}
+		li{
+			width: 60px;
+			height: 25px;
+			border: 1px solid black;
+			background-color: green;
+			text-align: center;
+			display: inline;
+			float: left;
+			margin-left: 14px;
+
+		}
+		p{
+			width: 300px;
+			height: 20px;
+			margin-top: 50px;
+			clear: both;
+		}
+		.footer{
+			margin-top: 100px;
+			width: 400px;
+			height: 100px;
+			border: 1px solid gray;
+			clear: both;
+		}
+		.right{
+			width: 200px;
+			height: 100px;
+			border: 1px solid black;
+			display: inline-block;
+
+		}
+	</style>
+	<script type="text/javascript">
+		
+		window.onload = function(){
+			
+			function MyClick(btStr , fun){
+				var bt = document.getElementById(btStr);
+				bt.onclick = fun;
+			};
+
+			MyClick("bt1",function(){
+				var bj = document.getElementById("bj");
+				alert(bj.innerHTML);
+			});
+
+			/*var bt1 = document.getElementById("bt1");
+			bt1.onclick = function(){
+				var bj = document.getElementById("bj");
+				alert(bj.innerHTML);
+			};*/
+
+			var bt2 = document.getElementById("bt2");
+			bt2.onclick = function(){
+				var li = document.getElementsByTagName("li");
+				for (var i = 0; i < li.length; i++) {
+					
+					alert(li[i].innerHTML);
+				}
+				
+			};
+			var bt3 = document.getElementById("bt3");
+			bt3.onclick = function(){
+				var gender = document.getElementsByName("gender");
+				for (var i = 0; i < gender.length; i++) {
+						alert(gender[i].value);
+					}	
+			};
+		};
+	</script>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div class="top">
+		<p>你喜欢哪个城市？</p>
+		<ul>
+			<li id="bj">北京</li>
+			<li>上海</li>
+			<li>南京</li>
+			<li>云南</li>
+		</ul>
+		<p>你喜欢哪款游戏？</p>
+		<ul>
+			<li>红警</li>
+			<li>魔兽</li>
+			<li>LOL</li>
+			<li>王者荣耀</li>
+		</ul>
+		<p>你手机的操作系统？</p>
+		<ul>
+			<li>IOS</li>
+			<li>Android</li>
+			<li>window phone</li>  
+			<li>linux</li>
+		</ul>
+
+		<div class="footer">
+			gender:<input type="radio" name="gender" value="male"  >Male
+				   <input type="radio" name="gender" value="female" >Female <br>
+			name: &nbsp;<input type="text" name="" value="abcde" placeholder="">
+		</div>
+
+	</div>
+	<div class="right">
+		<button type="" id="bt1">点击获取id为bj</button><br>
+		<button type="" id="bt2">点击获取li</button><br>
+		<button type="" id="bt3">点击获取name为gender</button><br>
+	</div>
+	
+</body>
+</html>

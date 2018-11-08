@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		.container{
+			width: 300px;
+			margin: 20px auto;
+		}
+		.footer{
+			margin-top: 30px;
+			width: 300px;
+			border: 1px solid gray;
+			text-align: center;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+
+		DelTR = function(){
+			
+
+					var tr = this.parentNode.parentNode;
+					var name = tr.getElementsByTagName("td")[0].innerHTML;
+					var a = confirm("你确定删除"+name+"?");
+
+					if(a){
+						tr.parentNode.removeChild(tr);
+					}else{
+
+					}
+
+				};
+
+
+		window.onload = function(){
+			var Alla = document.getElementsByTagName("a");
+			var submit = document.getElementById("submit");
+
+
+			for (var i = 0; i < Alla.length; i++) {
+				Alla[i].onclick = DelTR;
+			
+			}
+
+			submit.onclick = function(){
+				var new_name = document.getElementById("name").value;
+				var new_email = document.getElementById("email").value;
+				var new_salary = document.getElementById("salary").value;
+				
+				var table = document.getElementById("table");
+
+				var tbody = table.getElementsByTagName("tbody")[0];
+				var tr = document.createElement("tr");
+
+				
+				
+				var td = document.createElement("td");
+				var td1 = document.createElement("td");
+				var td2 = document.createElement("td");
+				var td3 = document.createElement("td");
+				var a = document.createElement("a");
+				a.href = "javascript:;";
+				a.onclick = DelTR;
+
+				var text_name = document.createTextNode(new_name);
+				var text_email = document.createTextNode(new_email);
+				var text_salary = document.createTextNode(new_salary);
+				var text_a = document.createTextNode("Delete");
+
+				td.appendChild(text_name);
+				td1.appendChild(text_email);
+				td2.appendChild(text_salary);
+
+				tr.appendChild(td);
+				tbody.appendChild(tr);
+
+				tr.appendChild(td1);
+				tbody.appendChild(tr);
+
+				tr.appendChild(td2);
+				tbody.appendChild(tr);
+
+				td3.appendChild(a);
+				a.appendChild(text_a);
+				tr.appendChild(td3);
+				tbody.appendChild(tr);
+
+			};
+
+		};
+	</script>
+</head>
+<body>
+	<div class="container">
+		
+
+	
+	<table border="1" bordercolor="#a0c6e5" style="border-collapse:collapse;" id="table">
+			<th>Name</th>
+			<th>Email</th>
+			<th>Salary</th>
+			<th></th>
+			<tr>
+				<td>Tom</td>
+				<td>tom@tom.com</td>
+				<td>5000</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+			<tr>
+				<td>Jerry</td>
+				<td>jerry@jerry.com</td>
+				<td>8000</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+			<tr>
+				<td>Bob</td>
+				<td>bob@bob.com</td>
+				<td>10000</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+	</table>
+
+	<div class="footer">
+		<p>添加新员工</p>
+		name:<input type="text" id="name" value="aaa" placeholder=""><br>
+		email:<input type="text" id="email" value="bbb" placeholder=""><br>
+		salary:<input type="text" id="salary" value="ccc" placeholder=""><br>
+		<input type="submit" id="submit" value="submit">
+	</div>
+
+
+		</div>
+
+	
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	
+	<img id="p1" onclick="change()" src="img/emo1.jpg" >
+	
+	
+	
+	<script type="text/javascript">
+		
+		function change(){
+			var em = document.getElementById("p1");
+			if(em.src.match("emo2")){
+				em.src = "img/emo1.jpg";
+			}
+			else{
+				em.src = "img/emo2.jpg";
+			}
+		}
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	
+	<!--
+	筛选数组中的成年人
+	-->
+	
+	
+	<script type="text/javascript">
+		function Person(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		Person.prototype.toString = function(){
+			return "Person[name="+this.name+",age="+this.age+"]";
+		};
+		var pr = new Person("张三",19);
+		var pr1 = new Person("李四",17);
+		var pr2 = new Person("王五",28);
+		var pr3 = new Person("赵丽",19);
+		var pr4 = new Person("孙尚香",16);
+		var pr5 = new Person("刘备",24);
+		
+		
+		var perArr = [pr,pr1,pr2,pr3,pr4,pr5];
+		
+		function getAdult(arr){
+			
+			var newArr = [];
+			
+			for(var i =0;i<perArr.length;i++){
+				if(perArr[i].age >= 18){
+					newArr.push(perArr[i]);
+				}
+				// console.log(perArr[i]);
+			}
+			return newArr;
+		
+		}
+		//console.log(perArr[0]);
+		var result = getAdult(perArr);
+		console.log(result);
+		
+		
+		
+		
+	</script>
+</body>
+</html>

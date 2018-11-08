@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style type="text/css" media="screen">
+		body{
+			height: 2000px;
+		}
+		#box1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+
+
+			var box1 = document.getElementById("box1");
+
+			/*
+				火狐里不支持onmousewheel函数
+
+			*/
+			box1.onmousewheel = function(event){
+				event = event || window.event;
+				//event.wheelDelta 可以获取鼠标滚轮滚动的方向
+				//向上滚120 向下滚-120
+				//火狐不支持wheelDelta 
+				//火狐里用event.detail属性
+				//向上滚-3 向下滚3
+				if(event.wheelDelta > 0 || event.detail < 0){
+					box1.style.height = box1.clientHeight - 10 +"px";
+				}
+				else{
+					box1.style.height = box1.clientHeight + 10 +"px";
+				}
+
+
+				/*
+					使用addEventListener()方法绑定响应函数，取消默认行为时不能使用return false
+					需要使用event来取消默认行为
+					ie8不支持event.preventDefault()，会报错
+
+				*/
+
+				event.preventDefault && event.preventDefault();
+
+				/*
+					取消滚动条的默认行为
+				*/
+				return false;
+
+			}
+
+			//为火狐绑定滚轮事件
+			Bind(box1,"DOMMouseScroll",box1.onmousewheel);
+
+
+			function Bind(obj,eventStr,callback){
+				if(obj.addEventListener){
+					obj.addEventListener(eventStr , callback,false);
+				}else{
+					obj.attachEvent("on"+eventStr ,function(){
+						callback.call(obj);
+					});
+				}
+			}
+
+
+		};
+	</script>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div id="box1">
+		
+	</div>
+</body>
+</html>

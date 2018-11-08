@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style type="text/css" media="screen">
+		#box1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+		}
+		#box2{
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			position: absolute;
+		}
+
+		#img{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+		}
+		
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+
+			var box1 = document.getElementById("box1");
+			var box2 = document.getElementById("box2");
+			var img = document.getElementById("img");
+
+			Tuo(box1);
+			Tuo(box2);
+			Tuo(img);
+
+			function Tuo(obj){
+				obj.onmousedown = function(event){
+
+					//设置obj捕获所有鼠标按下的事件 ,只针对ie8浏览器
+					if(obj.setCapture){
+						obj.setCapture();
+					}
+					
+
+
+					event = event || window.event;
+					var lo = event.clientX - obj.offsetLeft;
+					var to = event.clientY - obj.offsetTop;
+
+					document.onmousemove =function(event){
+						event = event || window.event;
+						var left = event.clientX - lo;
+						var top = event.clientY - to;
+
+						obj.style.left = left + "px";
+						obj.style.top = top + "px";
+
+
+					};
+
+					document.onmouseup = function(){
+						document.onmousemove = null;
+						document.onmouseup = null;
+						//当鼠标松开时，取消对事件的捕获
+						if(obj.setCapture){
+						obj.releaseCapture();
+						}
+						
+					};
+					return false;
+				};
+			}
+		};
+	</script>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+	<div id="box1"></div>
+	<div id="box2"></div>
+	<img src="img/d2_p1.jpg" id="img">
+	
+</body>
+</html>

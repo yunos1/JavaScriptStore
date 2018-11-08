@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script>
+		window.onload = function(){
+			
+			
+			/* 
+			
+			Navigator
+				代表的当前浏览器的信息，通过该对象可以来识别不同的浏览器
+				userAgent是一个字符串，包含描述浏览器信息
+			*/
+			
+			var ua = navigator.userAgent;
+			if(/firefox/i.test(ua)){
+				alert("我是火狐浏览器");
+			}else if(/chrome/i.test(ua)){
+				alert("我是chrome浏览器");
+			}else if(/msie/i.test(ua)){
+				alert("我是IE浏览器");
+			}else if("ActiveXObject" in window){
+				alert("我是IE浏览器");
+			}
+		};
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

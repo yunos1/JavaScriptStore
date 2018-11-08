@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script>
+		window.onload = function(){
+			
+			
+			var bt1 = document.getElementById("bt1");
+			
+			bind(bt1,"click",function(){
+				alert(12);
+			});
+			
+			function bind(obj,objStr,callback){
+			    if(obj.addEventListener){
+				    obj.addEventListener(objStr,callback,false);
+			    }else{
+				    obj.attachEvent("on"+ objStr,callback);
+			    }
+			}
+		};
+	</script>
+</head>
+<body>
+	
+	<input type="button" value="bt" id="bt1">
+	<input type="button" value="bt" id="bt2">
+	<input type="button" value="bt" id="bt3">
+	
+</body>
+</html>

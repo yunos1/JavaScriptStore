@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+
+	<style type="text/css" media="screen">
+		*{
+			margin: 0px;
+			padding: 0px;
+
+		}
+		.top{
+			width: 200px;
+			margin: 50px auto;
+		}
+		ul{
+			list-style: none;
+		}
+		li{
+			text-align: center;
+			margin-top: 10px;
+			background-color: green;
+			
+		}
+		.footer{
+			width: 200px;
+			margin: 50px auto;
+		}
+	</style>
+
+	<script type="text/javascript">
+		
+
+		window.onload = function(){
+
+			var bt1 = document.getElementById("bt1");
+			bt1.onclick = function(){
+
+
+				var li = document.createElement("li");
+				var liText  = document.createTextNode("广州");
+				li.appendChild(liText);
+
+				var city  = document.getElementById("city");
+				city.appendChild(li);
+			};
+
+		};
+
+
+
+	</script>
+
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div class="top">
+		
+	
+	
+	<p>你喜欢的城市？</p>
+	<ul id="city">
+		<li>北京</li>
+		<li>上海</li>
+		<li>南京</li>
+	</ul>
+
+	</div>
+	<div class="footer">
+		<button id="bt1">添加</button>
+	</div>
+</body>
+</html>

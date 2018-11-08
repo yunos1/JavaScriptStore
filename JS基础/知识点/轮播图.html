@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		#outer{
+			width: 520px;
+			height: 300px;
+			position: relative;
+			margin: 100px auto;
+			padding:10px 0;
+			background-color: greenyellow;
+			overflow: hidden;
+		}
+		#imgList{
+			position: absolute;
+			
+		}
+		#img_ul{
+			list-style: none;
+			
+
+		}
+		#img_ul li{
+			margin: 0 10px;
+			float: left;
+		}
+		#navNav{
+			position: absolute;
+			bottom: 10px;
+		}
+		#navNav a{
+			width: 25px;
+			height: 20px;
+			margin: 0 10px;
+			background-color: red;
+			/*设置透明度，普通浏览器*/
+			opacity: 0.5;
+			/*设置透明度，IE8*/
+			filter: alpha(opacity = 50);
+			float: left;
+		}
+		#navNav a:hover{
+			background-color: black;
+		}
+	</style>
+	<script type="text/javascript" src="js/tools.js"></script>
+	<script type="text/javascript">
+		
+		window.onload = function(){
+
+			var outer = document.getElementById("outer");
+			var imgList = document.getElementById("imgList");
+			var imgArr = document.getElementsByTagName("img");
+			var navNav =document.getElementById("navNav");
+
+			//设置imgList的宽度，可以自动根据图片数量调节
+
+			imgList.style.width = imgArr.length * 520 + "px";
+
+			//设置导航点居中
+
+			navNav.style.left = (outer.offsetWidth - navNav.offsetWidth)/2 + "px";
+
+			//默认显示图片的索引
+
+			var index = 0;
+			
+			//获取所有的a
+			var Alla = document.getElementsByTagName("a");
+			//设置第一个a的颜色为black
+			Alla[index].style.backgroundColor = "black";
+
+			//遍历所有的a
+
+			for(var i = 0;i<Alla.length;i++){
+
+				//为每一个超链接都添加一个num属性
+				Alla[i].num = i;
+
+				//为超链接绑定单击响应函数
+
+				Alla[i].onclick = function(){
+
+					//关闭自动切换的定时器
+					clearInterval(timer);
+					
+					//获取点击超链接的索引，并将其设置为index
+
+					index = this.num;
+					/*imgList.style.left = -520 * index + "px";*/
+
+					//使用move函数来切换图片
+
+					move(imgList,"left",-520 * index,20,function(){
+						//当动画执行完，开启自动切换
+						autoChange();
+					});
+					//设置选中的a
+					setA();
+
+
+
+				};
+
+			}
+			//调用自动切换图片
+			autoChange();
+
+			var timer;
+			//创建一个函数，用来开启自动切换图片
+			function autoChange(){
+
+				//开启一个定时器，用来定时去切换图片
+
+				timer = setInterval(function(){
+					//使索引自增
+					index++;
+
+					//判断index的值 
+					index %= imgArr.length;
+
+
+					//执行动画，切换图片
+
+					move(imgList,"left",-520 * index , 20 ,function(){
+						setA();
+					});
+					
+				},3000);
+			};
+
+			
+
+
+
+			//创建一个方法用来设置选中的a
+			function setA(){
+
+				//判断当前图片是否是最后一张图片
+
+				if(index >= imgArr.length - 1){
+
+					//当是最后一张图片时，一瞬间将其设为第一张图片(第一张和最后一张一样)
+					imgList.style.left = 0;
+					//当是最后一张时，把a的索引设置为0
+					index = 0;
+				}
+				//遍历所有的a，并将它们的背景颜色设置为红色
+				for(var i = 0;i<Alla.length;i++){
+					Alla[i].style.backgroundColor = "";
+				}
+				//将选中的a设置为黑色
+				Alla[index].style.backgroundColor = "black";
+			};
+
+
+		};
+	</script>
+</head>
+<body>
+	<div id="outer">
+		
+		<div id="imgList">
+			<ul id="img_ul">
+				<li><img src="img/1.jpg" alt=""></li>
+				<li><img src="img/2.jpg" alt=""></li>
+				<li><img src="img/3.jpg" alt=""></li>
+				<li><img src="img/4.jpg" alt=""></li>
+				<li><img src="img/5.jpg" alt=""></li>
+				<li><img src="img/1.jpg" alt=""></li>
+			</ul>
+
+		</div>
+		<div id="navNav">
+			<a href="javascript:;" title=""></a>
+			<a href="javascript:;" title=""></a>
+			<a href="javascript:;" title=""></a>
+			<a href="javascript:;" title=""></a>
+			<a href="javascript:;" title=""></a>
+		</div>
+	</div>
+</body>
+</html>

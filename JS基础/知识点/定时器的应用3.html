@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		#box{
+			width:100px;
+			height:100px;
+			background-color: red;
+			position:absolute;
+		}
+
+	</style>
+	<script type="text/javascript" src="js/tools.js"></script>
+	<script>
+		window.onload = function(){
+			var box = document.getElementById("box");
+			var bt = document.getElementById("bt");
+			var bt2 = document.getElementById("bt2");
+			bt.onclick = function(){
+				move(box,"left",500,10);
+			};
+			bt2.onclick = function(){
+				move(box,"height",500,10,function(){
+					move(box,"width",500,10,function(){
+					
+					});
+				});
+			};
+		};
+	</script>
+</head>
+<body>
+	<button id="bt">按钮</button>
+	<button id="bt2">按钮</button>
+	<div id="box">
+		
+		
+	</div>
+	
+</body>
+</html>

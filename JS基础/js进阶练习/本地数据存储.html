@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function bt1(){
+			var username = $("#username").val();
+			var pwd = $("#pwd").val();
+			// sessionStorage.setItem("k_username",username);
+			// sessionStorage.setItem("k_pwd",pwd);
+			localStorage.setItem("k_username",username);
+			localStorage.setItem("k_pwd",pwd);
+			alert("存储成功");
+		}
+		function bt2(){
+			// alert(sessionStorage.getItem("k_username"));
+			// alert(sessionStorage.getItem("k_pwd"));
+			alert(localStorage.getItem("k_username"));
+			alert(localStorage.getItem("k_pwd"));
+		}
+	</script>
+</head>
+<body>
+	<form action="#" method="">
+		<input type="text" id="username" value=""/>
+		<input type="password" id="pwd" />
+		<button type="button" onclick="bt1()">按钮1</button>
+		<button type="button" onclick="bt2()">按钮2</button>
+	</form>
+</body>
+</html>

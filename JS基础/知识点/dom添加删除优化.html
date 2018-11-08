@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		.container{
+			width: 300px;
+			margin: 20px auto;
+		}
+		.footer{
+			margin-top: 30px;
+			width: 300px;
+			border: 1px solid gray;
+			text-align: center;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+
+		deltr = function(){
+					var tr = this.parentNode.parentNode;
+					var name = tr.getElementsByTagName("td")[0].innerHTML;
+
+					var r = confirm("确认删除"+name+"？");
+					if(r){
+						tr.parentNode.removeChild(tr);
+					}
+				};
+		
+		window.onload = function(){
+
+			var aAll = document.getElementsByTagName("a");
+
+			for (var i = 0; i < aAll.length; i++) {
+				aAll[i].onclick = deltr;
+			}
+
+
+
+			var submit = document.getElementById("submit");
+			submit.onclick = function(){
+				
+				//获取input中的值
+				var name = document.getElementById("name").value;
+				var email = document.getElementById("email").value;
+				var salary = document.getElementById("salary").value;
+
+
+
+				var table  = document.getElementById("table");
+				var tr = document.createElement("tr");
+				var tbody = table.getElementsByTagName("tbody")[0];
+
+
+				tbody.appendChild(tr);
+
+				tr.innerHTML = "<td>"+name+"</td>"+
+								"<td>"+email+"</td>"+
+								"<td>"+salary+"</td>"+
+								"<td>"+'<a href = "javascript:;">'+"Delete"+'</a>'+"</td>";
+
+				var a  = tr.getElementsByTagName("a")[0];
+				a.onclick = deltr;
+
+			};
+		};
+	</script>
+</head>
+<body>
+	<div class="container">
+		
+
+	
+	<table border="1" bordercolor="#a0c6e5" style="border-collapse:collapse;" id="table">
+			<th>Name</th>
+			<th>Email</th>
+			<th>Salary</th>
+			<th></th>
+			<tr>
+				<td>Tom</td>
+				<td>tom@tom.com</td>
+				<td>5000</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+			<tr>
+				<td>Jerry</td>
+				<td>jerry@jerry.com</td>
+				<td>8000</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+			<tr>
+				<td>Bob</td>
+				<td>bob@bob.com</td>
+				<td>10000</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+	</table>
+
+	<div class="footer">
+		<p>添加新员工</p>
+		name:<input type="text" id="name" value="aaa" placeholder=""><br>
+		email:<input type="text" id="email" value="bbb" placeholder=""><br>
+		salary:<input type="text" id="salary" value="ccc" placeholder=""><br>
+		<input type="submit" id="submit" value="submit">
+	</div>
+
+
+		</div>
+
+</body>
+</html>

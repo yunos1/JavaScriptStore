@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		/* 
+		创建一个正则表达式检查一个字符串中是否含有aaa
+		
+		量词 通过量词可以设置一个内容出现的次数
+			-量词只对它前面的一个内容起作用
+			-{n} 正好出现n次
+			-{m,n} 出现m-n次
+			-{m,}  m次以上
+			- n+ n至少一次，相当于{1,}
+			- n* n 0个或多个，相当于{0,}
+			- n？ n 0个或1个，相当于{0,1}
+		*/
+		var reg = /a{3}/;
+		//ababab
+		reg = /(ab){3}/;
+		
+		reg = /ab+c/;
+		console.log(reg.test("abcabab"));
+		
+		
+		/* 
+			检查一个字符串中是否以a开头
+			^ 表示开头
+			$ 表示结尾
+			如果在正则表达式中同时使用^ $则要求字符串必须完全符合正则表达式
+				例如： ^a$ 则为"a"
+					  ^abc$ 则为"abc"
+		*/
+		reg = /^a/; //匹配开头的a
+		reg = /a$/; //匹配结尾的a
+		reg = /^abc$/;
+		console.log(reg.test("abc"));
+		
+		
+		/* 
+		判断是否为手机号
+			1.以1为开头
+			2.第二位是3-9的数字
+			3.三位以后任意数字
+		*/
+		reg = /^1[3-9][0-9]{9}$/;
+		var phonenum = "13218336853";
+		console.log(reg.test(phonenum));
+	//	console.log("\\\\")
+		/* 
+			\w  任意字母、数字、_
+			\W  除了字母、数字、_
+			\d  任意的数字
+			\D  除了数字
+			\s  空格
+			\S  除了空格
+			\b  单词边界
+			\B  除了单词边界
+		*/
+		reg = /\bchild\b/;
+		
+		console.log(reg.test("hello children"));  //false
+		console.log(reg.test("hello child"));     //true
+		
+		
+		//接受一个用户的输入
+		
+	//	var str = prompt("请输入你的用户名:");
+		
+	//	console.log(str);
+		
+		
+		str = "        admin    ";
+		
+		//去除开头的空格
+		str1 = str.replace(/^\s*/,"");
+		
+		//去除结尾的空格
+		str1 = str.replace(/\s*$/,"");
+		
+		//去掉字符串前后的空格
+		str1 = str.replace(/^\s*|\s*$/g,"");
+		console.log(str1);
+		
+		/* 
+			电子邮件的格式
+			hello  @abc.com.cn            
+			1.任意的字母、数字、下划线、点   \w{3,} (\.\w+)*
+			2.@							  @
+			3.字母、数字					  [A-z0-9]+
+			4.点                           
+			5.任意字母（2-5位）             (\.[A-z]{2,5}){1,2}
+			6.点
+			7.任意字母（2-5位）
+		*/
+		var emailReg = /^\w{3,}(\.\w+)*@[A-z0-9]+(\.[A-z]{2,5}){1,2}$/;
+		var email = "abc.hello@163.com";
+		console.log(emailReg.test(email));
+		
+	</script>
+</body>
+</html>

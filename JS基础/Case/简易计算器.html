@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 30px;
+		}
+	</style>
+	<script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js">
+		
+	</script>
+	<script>
+		$(document).ready(function(){
+			var $bt = $("#equal")
+			$bt.click(function(){
+				var n1 = parseInt(form.num1.value)
+				var n2 = parseInt(form.num2.value)
+				var result1 = document.getElementById("result")
+				
+				var result
+				
+				
+				var opt = form.character.value
+				if(opt == '/' && n2 == 0){
+					alert("除数不能为0")
+					return false
+				}
+					switch(opt){
+						 case '+':
+							result = n1 + n2
+							break
+						case '-':
+							result = n1 - n2
+							break
+						case '*':
+							result = n1 * n2
+							break
+						case '/':
+							result = n1 / n2
+							break
+					}
+				
+				
+				
+				result1.value = result
+					
+			})
+		})
+	</script>
+	
+</head>
+<body>
+	<form name="form">
+	<input type="text" class="box" name="num1"/>
+	<select name="character">
+		<option class="opt" value="+" selected="selected">+</option>
+		<option class="opt" value="-">-</option>
+		<option class="opt" value="*">*</option>
+		<option class="opt" value="/">/</option>
+	</select>
+	<input type="text" class="box" name="num2" />
+	<input type="button" id="equal" value="=">
+	
+	<input type="text" id="result" name="num">
+	</form>
+</body>
+</html>

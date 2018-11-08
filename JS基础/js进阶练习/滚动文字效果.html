@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	
+		<p id="p1"> 默认文字效果 </p>
+		<marquee id="m1" >
+			<p id="p2">默认滚动效果</p>
+		</marquee>
+		<marquee id="m2" bgcolor="aqua" direction="right"  >
+			<p id="p3">滚动效果</p>
+		</marquee>
+		<marquee id="m3" bgcolor="yellow" direction="up" height="200px" behavior="alternate">
+			<p id="p4">滚动效果</p>
+		</marquee>
+		<marquee id="m4" bgcolor="greenyellow" direction="right" height="100px" behavior="alternate"
+		scrollamount="20px"  
+		scrolldelay="300"> 
+			<p id="p5">滚动效果</p>
+		</marquee>
+		<!--scrollamount="20px"  //设置每次滚动的像素-->
+		<!--scrolldelay="300">    设置滚动的延迟，值越小，滚动的越快-->
+		
+		
+	
+		<button type="button" id="bt1" onclick="MyFunction()">button</button>
+	
+	<script type="text/javascript">
+		function MyFunction(){
+			var pp = document.getElementById('p2');
+			
+		}
+	</script>
+</body>
+</html>

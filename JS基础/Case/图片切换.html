@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0px;
+			padding: 0px;
+
+		}
+		div{
+			width: 1200px;
+			margin: 50px auto;
+			text-align: center;
+		}
+		#image{
+			width: 400px;
+			height: 400px;
+			
+		}
+
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+
+			var imgArr = ["img/d2_p1.jpg","img/d2_p2.jpg","img/d2_p3.jpg","img/d2_p4.jpg","img/d2_p5.jpg","img/d2_p6.jpg"];
+			
+			var image = document.getElementById("image");
+			var index = 0;
+
+			 var tip = document.getElementById("tip");
+			tip.innerHTML = "共有"+imgArr.length+"张图片，当前是第"+(index+1)+"张"; 
+
+			var prev = document.getElementById("previous");
+			var next = document.getElementById("next");
+
+
+			prev.onclick = function(){
+				
+				 index--;
+				if(index < 0 ){
+					index = imgArr.length-1;
+				}
+				
+				image.src = imgArr[index]; 
+			};
+			
+			next.onclick = function(){
+				
+				 index++;
+				if(index > imgArr.length-1 ){
+					index = 0;
+				}
+				
+				image.src = imgArr[index]; 
+
+			};
+		};
+	</script>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+	<div>
+		 <p id="tip"></p> 
+		<img id="image" src="img/d2_p1.jpg" alt="风景">
+		<button id="previous">上一张</button>
+		<button id="next">下一张</button>
+	</div>
+	
+</body>
+</html>

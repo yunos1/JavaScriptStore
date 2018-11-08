@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Per(){
+			
+		}
+		var p1 = new Per();
+		var p2 = new Per();
+		
+		//prototype是
+		//原型对象就相当于一个公共区域，所有同一个类的实例都可以访问到这个原型对象
+		
+		//以后我们创建构造函数时，可以将这些对象共有的属性和方法，统一添加到构造函数的原型对象中
+		
+		Per.prototype.a = "我是prototype中的a";
+		
+		//console.log(p1.__proto__ == p2.__proto__); //__proto__属性是查看原型对象的
+		console.log(p1.a == p2.a);
+		
+		
+		function Person(name,age,sex){
+			this.name = name;
+			this.age = age;
+			this.sex = sex;
+		}
+		Person.prototype.sayName = function(){
+			alert("My Name is "+this.name);
+		}
+		
+		var pr = new Person("张三",18,"男");
+		var pr2 = new Person("李四",19,"男");
+		
+		pr.sayName();
+		pr2.sayName();
+		console.log(pr.sayName == pr2.sayName);
+		
+		
+		
+		
+	</script>
+</body>
+</html>

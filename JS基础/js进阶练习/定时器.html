@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script>
+		window.onload = function(){
+			
+			var img = document.getElementById("img");
+			var start = document.getElementById("start");
+			var pause = document.getElementById("pause");
+			
+			var imgArr = ["img/emo1.jpg","img/emo2.jpg"];
+			var index = 0;
+			var timer;
+			
+			start.onclick = function(){
+				clearInterval(timer);
+				timer = setInterval(function(){
+					
+					index++;
+					
+					//判断是否到数组最后一个索引
+					/* if(index >= imgArr.length){
+						index = 0;
+					} */
+					index %= imgArr.length;
+					img.src = imgArr[index];
+				},1000);
+			};
+			pause.onclick = function(){
+				clearInterval(timer);
+			};
+			
+			
+		};
+	</script>
+</head>
+<body>
+	<img id="img" src="img/emo1.jpg" />
+	<button id="start">开始</button>
+	<button id="pause">暂停</button>
+	
+</body>
+</html>

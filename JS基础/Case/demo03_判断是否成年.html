@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function Person(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		Person.prototype.toString = function(){
+			return "Person[name="+this.name+",age="+this.age+"]";
+		}
+		var pr = new Person("弈星",12);
+		var pr1 = new Person("刘备",24);
+		var pr2 = new Person("貂蝉",18);
+		var pr3 = new Person("吕布",20);
+		var pr4 = new Person("小乔",17);
+		var pr5 = new Person("大乔",19);
+		var pr6 = new Person("武则天",32);
+		var pr7 = new Person("妲己",20);
+		
+		var arr = [pr,pr1,pr2,pr3,pr4,pr5,pr6,pr7];
+		
+		function GetAdult(arr){
+			var newArr = [];
+			for(var i = 0;i<arr.length;i++){
+				if(arr[i].age >= 18){
+					newArr.push(arr[i]);
+				}
+			}
+			return newArr;
+		}
+		console.log(GetAdult(arr));
+		
+	</script>
+</body>
+</html>
