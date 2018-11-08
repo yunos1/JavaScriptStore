@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<style>
+	.container.imgs img{
+		width: 300px;
+		height: 300px;
+		margin-left: 50px;
+	}
+</style>
+</head>
+<body>
+	
+	<div class="container">
+		
+		<h4>基本表单</h4>
+		<form role="form" class="form-horizontal">
+			<div class="form-group">
+				<label for="email1">Email</label>
+				<input type="email" class="form-control" id="email1" placeholder="please enter email">
+			</div>
+			<div class="form-group">
+				<label for="text1">user</label>
+				<input type="text" class="form-control" id="text1" placeholder="enter username">
+			</div>
+			<div class="form-group">
+				<label for="password1">password</label>
+				<input type="password" class="form-control" id="password1" placeholder="enter password">
+			</div>
+			<div class="checkbox">
+				<label for="checkbox1">
+					<input type="checkbox" id="checkbox1">reading
+				</label>
+				<label for="checkbox2">
+					<input type="checkbox" id="checkbox2">running
+				</label>
+
+			</div>
+			<div class="randio">
+				<label for="radio1">
+					<input type="radio" id="radio1" name="sex">male
+				</label>
+				<label for="radio2">
+					<input type="radio" id="radio2" name="sex">female
+				</label>
+			</div>
+			<button class="btn btn-default" type="submit">Click</button>
+		</form>
+		</div>
+		<div class="container" style="padding:20px;">
+			
+		
+		<h4>水平表单</h4>
+		<form role="form" class="form-horizontal">
+			<div class="form-group">
+				<label for="text22" class="col-sm-2 control-label">user</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="text22" placeholder="enter text">
+				</div>
+				
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<label>
+						<input type="checkbox">reading
+					</label>
+					<label for="">
+						<input type="checkbox">watching
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-10 col-sm-offset-2">
+					
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-10 col-sm-offset-2">
+					<label>
+						<input type="radio" name="sex">male
+					</label>
+					<label>
+						<input type="radio" name="sex">female
+					</label>
+					
+				</div>
+				
+				
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button class="btn btn-success" type="submit">click</button>
+				</div>
+			</div>
+		</form>
+
+	</div>
+
+	<!-- 图片 -->
+
+	<div class="container imgs">
+		<!-- 为图片添加圆角 -->
+		<img src="img/cat.jpg" class="img-rounded">
+		<!-- 将图片变为圆形 -->
+		<img src="img/cat.jpg" class="img-circle">
+		<!--  缩略图功能-->
+		<img src="img/cat.jpg" class="img-thumbnail">
+
+	</div>
+	<!--响应式图片 -->
+	<div class="container">
+		<img src="img/cat.jpg" alt="" class="img-responsive">
+	</div>
+
+	<!-- 辅助类_文本 -->
+	<p class="text-muted">This is a paragraph muted</p>
+	<p class="text-primary">This is a paragraph</p>
+	<p class="text-success">This is a paragraph</p>
+	<p class="text-warning">This is a paragraph</p>
+	<p class="text-info">This is a paragraph</p>
+	<p class="text-danger">This is a paragraph</p>
+	<!-- 背景 -->
+	<!-- class:bg-primary||bg-success||bg-info||bg-warning||bg-danger -->
+
+	<!-- <script src="js/jquery-3.1.1.js"></script>
+	<script src="js/bootstrap.min.js"></script> -->
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+ 
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

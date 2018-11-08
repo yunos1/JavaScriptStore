@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			//未定义变量
+			/* var x = 0.1;
+			var y = 0.2;
+			var sum = x + y;
+			console.log(sum); */
+
+
+			//break continue
+			/* var num = 0;
+			for (var i = 1; i < 10; i++) {
+				if (i % 5 == 0) {
+					//break;
+					continue;
+				}
+				num++;
+				console.log(i);
+			}
+			alert(num); */
+
+
+			/* var num = 0;
+			outermost:
+				for (var i = 0; i < 10; i++) {
+					for (var j = 0; j < 10; j++) {
+						if (i == 5 && j == 5) {
+							continue outermost;
+						}
+						num++;
+					}
+				}
+			alert(num); */
+
+
+			//变量复制
+			/* var num1 = 5;
+			var num2 = num1;
+			num1 = 4;
+			alert(num2);
+			alert(num1); */
+
+			/* var color = "blue";
+
+			function changeColor() {
+				if (color === "blue") {
+					color = "red";
+				} else {
+					color = "blue";
+				}
+			}
+			changeColor();
+			alert("Color is now " + color); */
+
+
+
+			/* 
+			var colors = new Array();
+			var count = colors.unshift("red","green");
+			//alert(count);
+			
+			colors.unshift("black");
+			
+			console.log(colors);
+			
+			var item = colors.pop();
+			console.log(colors); */
+
+
+
+			/* var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+			alert(numbers.indexOf(4));
+			alert(numbers.lastIndexOf(4)); //5
+			alert(numbers.indexOf(4, 4)); //5
+			alert(numbers.lastIndexOf(4, 4)); */
+
+			/* var result1 = callSomeFunction(add10, 10);
+			alert(result1); */
+
+			/* function Person() {}
+			var friend = new Person();
+			Person.prototype = {
+				constructor: Person,
+				name: "Nicholas",
+				age: 29,
+				job: "Software Engineer",
+				sayName: function() {
+					alert(this.name);
+				}
+			};
+			friend.sayName(); */
+
+
+
+
+
+			function Person() {}
+			var friend = new Person();
+			Person.prototype.name = "Nicholas";
+			Person.prototype.age = 29;
+			Person.prototype.job = "Software Engineer";
+			Person.prototype.sayName = function() {
+				alert(this.name);
+			};
+			friend.sayName();
+		</script>
+	</body>
+</html>
