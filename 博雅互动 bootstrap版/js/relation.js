@@ -9,3 +9,8 @@ window.onload =function(){
 							 
 	
 }
+
+// $(document).ready(function(){
+// 	$("#content").innerHTML='<h1>敬请期待...</h1><br/>';
+// 	$('content2').innerHTML = '<h4>Liu QZ</h4>';
+// });

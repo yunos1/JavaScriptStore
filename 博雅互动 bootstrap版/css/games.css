@@ -1,0 +1,112 @@
+#iphone1 {
+    width: 31px;
+    height: 36px;
+    display: inline-block;
+    background: url(../img/pad.png) no-repeat;
+}
+
+#iphone1:hover {
+    background: url(../img/pad.png) no-repeat -124px 0;
+}
+
+#android1 {
+    width: 33px;
+    height: 39px;
+    display: inline-block;
+    background: url(../img/pad.png) no-repeat -4px -98px;
+}
+
+#android1:hover {
+    background: url(../img/pad.png) no-repeat -122px -98px;
+}
+
+#ipad1 {
+    width: 27px;
+    height: 38px;
+    display: inline-block;
+    background: url(../img/pad.png) no-repeat 0 -199px;
+}
+
+#ipad1:hover {
+    background: url(../img/pad.png) no-repeat -121px -199px;
+}
+
+#pc1 {
+    width: 34px;
+    height: 28px;
+    display: inline-block;
+    background: url(../img/pad.png) no-repeat 0 -300px;
+}
+
+#pc1:hover {
+    background: url(../img/pad.png) no-repeat -120px -300px;
+}
+
+#tv1 {
+    width: 42px;
+    height: 29px;
+    display: inline-block;
+    background: url(../img/pad.png) no-repeat 0 -507px;
+}
+
+#tv1:hover {
+    background: url(../img/pad.png) no-repeat -120px -507px;
+}
+
+.game_left ul li span {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.game_left li {
+    padding: 20px 0;
+    border-bottom: 1px solid gray;
+    list-style: none;
+}
+
+.game_right {
+    background: #F5F5F5;
+}
+
+.game_right li {
+    float: left;
+    margin-left: 10px;
+    list-style: none;
+}
+
+.row.download {
+    margin: 20px 20px 5px 20px;
+}
+
+.pic_111 {
+    width: 31px;
+    height: 36px;
+    display: inline-block;
+    background: url(../img/pad.png) no-repeat;
+}
+
+.pic_221 {
+    width: 31px;
+    height: 36px;
+    display: inline-block;
+    background: url(../img/pad.png) no-repeat -4px -98px;
+}
+
+.pic_112 {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url(../img/landlords80.png) no-repeat;
+}
+
+.clearfix.blankspace {
+    height: 30px;
+}
+
+.downloading {
+    display: none;
+}
+
+.downloading.phone {
+    display: block;
+}

@@ -1,0 +1,86 @@
+.joinus {
+    margin: 8px 0 0 12px;
+    height: 34px;
+    width: 98px;
+    border: 1px solid #3aca7a;
+    border-radius: 5px;
+    background-color: #38b774;
+    font-size: 1em;
+}
+
+.joinus a {
+    line-height: 15px;
+    padding-top: 7px !important;
+    color: white !important;
+}
+
+.boya_nav {
+    margin-top: -20px;
+}
+
+.boya_nav2 {
+    margin: 15px 30px 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.boyatop_left {
+    width: 200px;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.boya_icon {
+    display: inline-block;
+    width: 23px;
+    height: 16px;
+    background: url(../img/location.png) 0 -100px no-repeat;
+}
+
+.boyatop_right ul li {
+    margin-left: 10px;
+    margin-top: 5px;
+    list-style: none;
+    display: inline-block;
+}
+
+.boyatop_right .home {
+    display: inline-block;
+    width: 15px;
+    height: 13px;
+    background: url(../img/home.png);
+}
+
+.boyatop_right .next {
+    display: inline-block;
+    width: 3px;
+    height: 8px;
+    background: url(../img/arrow.png);
+}
+
+.current {
+    color: green;
+}
+
+footer.jumbotron.text-center {
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+
+footer.jumbotron.text-center li {
+    list-style: none;
+}
+
+.form_top a {
+    width: 68px;
+    height: 29px;
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    background: url(../img/top.png) no-repeat 0 -40px;
+}
+
+.form_top a:hover {
+    background-position: 0 0;
+}

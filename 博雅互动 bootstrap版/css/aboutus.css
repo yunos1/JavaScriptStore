@@ -1,0 +1,18 @@
+ #mylist-navbar-collapse li {
+     margin: 20px 30px;
+     font-weight: bold;
+ }
+ 
+ .passage_about p {
+     font-size: 15px;
+     line-height: 30px;
+     margin-top: 20px;
+ }
+ 
+ .passage_about {
+     display: none;
+ }
+ 
+ .info.passage_about {
+     display: block;
+ }
