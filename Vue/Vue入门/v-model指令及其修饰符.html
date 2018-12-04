@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			
+			<!-- 
+				v-model 适用于 input textarea select 
+			 -->
+			
+			<p>------------input-------------------------</p>
+			<!-- 正常绑定 -->
+			<input type="text" v-model="name">
+			<span>{{name}}</span><br />
+			<!-- 懒加载，当用户移出input后才更新内容 -->
+			<input type="text" v-model.lazy="age">
+			<span>{{age}}</span><br />
+			<!-- 正常绑定sex -->
+			<input type="text" v-model="sex">
+			<pre>{{sex}}</pre><br />
+			<!-- 自动去除input里内容的前后多余空格 -->
+			<input type="text" v-model.trim="deletespac">
+			<pre>{{deletespac}}</pre><br />
+			<!-- 自动转换input里内容为number类型 -->
+			<input type="text" v-model.number="money">
+			<span>{{money}}</span><br />
+			
+			<label>
+				男
+				<input v-model="sex1" type="radio" value="male">
+			</label>
+			<label>
+				女
+				<input v-model="sex1" type="radio" value="female">
+			</label>
+			<p>{{sex1}}</p>
+			
+			<label>
+				男
+				<input v-model="sex2" value="male" type="checkbox">
+			</label>
+			<label>
+				女
+				<input v-model="sex2" value="female" type="checkbox">
+			</label>
+			<p>{{sex2}}</p>
+			
+			<p>------------textarea------------------------------</p>
+			
+			<textarea  v-model="articles"></textarea>
+			
+			<p>------------select-----------------------------</p>
+			
+			<p>单选</p>
+			<select v-model="where">
+				<option value="1">江苏</option>
+				<option value="2">山东</option>
+				<option value="3">浙江</option>
+			</select>
+			<span>{{where}}</span>
+			<p>多选</p>
+			<select v-model="food" multiple="multiple">
+				<option value="1">薯片</option>
+				<option value="2">苹果</option>
+				<option value="3">香蕉</option>
+				<option value="4">凤梨</option>
+			</select>
+			<span>{{food}}</span>
+		</div>
+		<script>
+			new Vue({
+				el:'#app',
+				data:{
+					name:"Tom",
+					age:29,
+					deletespac:"移去前后的空格",
+					sex:"female",
+					money:200,
+					sex1:"male",
+					sex2:['female'],
+					articles:"	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium maxime ratione commodi aut magni reprehenderit autem accusamus consectetur dignissimos quod quia error esse in itaque ad numquam quam! Nulla officia?",
+					where:1,
+					food:[]
+				},
+				methods:{
+					sayHello:function(){
+						
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<span v-html="link"></span>
+			<p v-pre="">{{name}}</p>
+		</div>
+		<script src="../vue.js"></script>
+		<script>
+			var app = new Vue({
+				el:"#app",
+				
+				data:{
+					name:"Tom",
+					link:"<a href='https://www.baidu.com/'>百度一下</a>"
+				}
+			})
+		</script>
+	</body>
+</html>

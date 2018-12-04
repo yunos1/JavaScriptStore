@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<p v-if="status===1">This status is one</p>
+			<p v-else-if="status === 2">This status is two</p>
+			<p v-else>This status is three</p>
+			
+			<!-- template vue内置的无意义标签，不会显示在html中 -->
+			<template v-if="status === 2">
+				<p>This is a paragraph1</p>
+				<p>This is a paragraph2</p>
+				<p>This is a paragraph3</p>
+			</template>
+		</div>
+		<script src="../vue.js"></script>
+		<script>
+			var app = new Vue({
+				el:'#app',
+				data:{
+					status:2
+				}
+			})
+		</script>
+	</body>
+</html>

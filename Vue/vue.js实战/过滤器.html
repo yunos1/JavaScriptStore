@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">{{time | formDates}}</div>
+		<script src="../vue.js"></script>
+		<script>
+			
+			var formDate = function(val){
+				return(val<10)?'0'+val:val;
+			}
+			
+			var app = new Vue({
+				el:'#app',
+				data:{
+					time:new Date()
+				},
+				filters:{
+					formDates:function(val){
+						var time = new Date();
+						var year = time.getFullYear();
+						var month = formDate(time.getMonth()+1);
+						var day = formDate(time.getDate());
+						var hours = formDate(time.getHours());
+						var minutes = formDate(time.getMinutes());
+						var seconds = formDate(time.getSeconds());
+						return year+'-'+month+'-'+day+' '+hours+':'+minutes+':'+seconds;
+					}
+				},
+				created:function(){
+					var _this = this;
+					this.timer = setInterval(function(){
+						_this.time = new Date()
+					},1000)
+				},
+				beforeDestroy:function(){
+					clearInterval(this.timer)
+				}
+				
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.active{
+				background: #f00;
+			}
+		</style>
+		<script src="vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- v-bind:可以简写为 :  -->
+			
+			<a v-bind:href="url">点我</a>
+			<img v-bind:src="src" alt="">
+			
+			<!-- {active:isActive} 的意思为当isActive为true时添加active类，当isActive为false时，不添加 -->
+			<button :class="{active:isActive}">加类</button>
+		</div>
+		
+		<script>
+			new Vue({
+				el:"#app",
+				data:{
+					url:"http://baidu.com",
+					src:"hello",
+					Class:"btn btn-default",
+					isActive:false
+				}
+			})
+		</script>
+	</body>
+</html>

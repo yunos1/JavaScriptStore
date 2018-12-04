@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	
+		<title></title>
+	<script src="vue.js"></script>
+	</head>
+	
+	<body>
+		<div id="app">
+			<div>
+				<input type="text" v-model="name">
+				<span>{{name}}</span>
+			</div>
+			<div>
+				<input type="text" v-model="sex">
+				<!-- v-show 仅仅是隐藏，还存在于Dom中 -->
+				<span v-show='sex'>你的性别是：{{sex}}</span>
+				<!-- v-if是删除操作，不存在与Dom中 -->
+				<span v-if="sex">你的性别是：{{sex}}</span>
+			</div>
+		</div>
+		<script>
+			new Vue({
+				el:'#app',
+				data:{
+					name:"Tom",
+					age:18,
+					sex:'',
+					message:'HelloWorld'
+				}
+			})
+		</script>
+	</body>
+</html>

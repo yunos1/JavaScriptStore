@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			
+			<!-- v-on:可以简写成 @  -->
+			<!-- stop和prevent可以阻止默认行为 -->
+			<!-- v-on:click.stop可以阻止默认行为 -->
+			<!-- v-on:submit.prevent可以阻止默认行为 -->
+			<!-- v- -->
+			
+			<button v-on="{mouseenter:MouseEnter,mouseout:MouseOut}" @click="Click">点我</button>
+			<form v-on:submit.prevent="Submit">
+				<input type="text">
+				<button type="submit">提交</button>
+			</form>
+			<!-- v-on:keyup.enter 监听用户键入enter建 -->
+			<form v-on:keyup.enter="Enter" v-on:submit.stop.prevent="Submit">
+				<input type="text">
+				<button type="submit">提交</button>
+			</form>
+		</div>
+		<script>
+			new Vue({
+				el:'#app',
+				data:{},
+				methods:{
+					Click:function(){
+						console.log("hehe")
+					},
+					MouseEnter:function(){
+						console.log("mouse enter")
+					},
+					MouseOut:function(){
+						console.log("mouse out")
+					},
+					Submit:function(){
+						console.log("haha")
+					},
+					Enter:function(){
+						console.log("enter")
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

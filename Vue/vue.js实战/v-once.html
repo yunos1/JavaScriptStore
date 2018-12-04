@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<p v-once="message">{{message}}</p>
+			<p>{{year}}</p>
+		</div>
+		<script src="../vue.js"></script>
+		<script>
+			var app = new Vue({
+				el:'#app',
+				data:{
+					message:'hello',
+					year:25
+				}
+			})
+		</script>
+	</body>
+</html>

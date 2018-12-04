@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+
+
+
+	<script>
+		
+		/*var str = "https://.baidu.com?id=1&name=zhansan";
+
+		function creat(){
+			var obj = {};
+			var array = str.split('?')[1];
+			array = array.split('&');
+			//console.log(array);
+			for(var i =0;i<array.length;i++){
+	             var currentarr = array[i].split('=');
+	             obj[currentarr[0]] = currentarr[1];
+			}
+			return obj;
+		}
+		console.log(creat(str));*/
+
+
+		var arr = [2,3,4,4,5,2,3,6],
+  			 arr2 = [];
+  		for (var i = 0; i < arr.length;i++) {
+  			if(arr2.indexOf(arr[i]) < 0){
+  				arr2.push(arr[i])
+  			}
+  		}
+  		console.log(arr2);
+		
+	</script>
+	
+</body>
+</html>

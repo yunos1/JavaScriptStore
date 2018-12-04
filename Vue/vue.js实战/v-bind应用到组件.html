@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<my-conponent :class ="{active:isActive}"></my-conponent>
+		</div>
+		<script src="../vue.js"></script>
+		<script>
+			
+			Vue.component('my-conponent',{
+				template:'<p class="news">我是{{name}},今年{{age}}岁</p>',
+				data:function(){
+					return {
+						name:'Tom',
+						age:18,
+					}
+				}
+			});
+			var app = new Vue({
+				el:'#app',
+				data:{
+					isActive:true
+				}
+			})
+		</script>
+	</body>
+</html>

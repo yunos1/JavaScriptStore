@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue入门</title>
+		<style>
+			#canvas{
+				width: 500px;
+				height: 500px;
+				text-align: center;
+				border: 1px solid gray;
+			}
+		</style>
+		<script src="vue.js" type="text/javascript"></script>
+	</head>
+	<body>
+		
+		
+		
+		<div id="app">
+			<!-- v-on:click可以替换为@click    也就是v-on: 等价于 @      -->
+			<!-- 单机 -->
+			<button @click.once="add(1)">加一岁</button>
+			<button v-on:click="subtract(1)">减一岁</button>
+			<!-- 双击 -->
+			<button v-on:dblclick="add(2)">加两岁</button>
+			<button v-on:dblclick="subtract(2)">减两岁</button>
+			
+			<p>My name {{name}},age is {{age}}</p>
+			
+			<!-- 鼠标移动 -->
+			<div id="canvas" v-on:mousemove="updateXY">
+				{{x}},{{y}}
+			</div>
+		</div>
+		<script type="text/javascript">
+			new Vue({
+				el:"#app",
+				data:{
+					name:"Sandy",
+					age:23,
+					message:"HelloWorld",
+					x:0,
+					y:0
+				},
+				methods:{
+					greet:function(){
+						return "haha";
+					},
+					add:function(num){
+						this.age+=num;
+					},
+					subtract:function(num){
+						 this.age-=num;
+					},
+					updateXY:function(event){
+						this.x = event.offsetX;
+						this.y = event.offsetY;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			[v-cloak]{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- v-cloak加入css可以去除闪动的问题 -->
+		<div id="app" v-cloak>
+			{{message}}
+		</div>
+		<script src="../vue.js"></script>
+		<script>
+			var app = new Vue({
+				el:'#app',
+				data:{
+					message:'Hello'
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<li v-for="student in lists">姓名：{{student.name}},年龄：{{student.age}}</li>
+			</ul>
+			<ol>
+				<li v-for="student of lists">name:{{student.name}},age:{{student.age}}</li>
+			</ol>
+			<ul>
+				<li v-for="(No,index) in lists">{{index}}-{{No.name}},age:{{No.age}}</li>
+			</ul>
+			<template v-for="list in lists"> 
+				<li>姓名:{{list.name}}</li>
+				<li>年龄:{{list.age}}</li>
+			</template>
+			<span v-for="list in lists">{{list}}</span>
+		</div>
+		<script src="../vue.js"></script>
+		<script>
+			var app = new Vue({
+				el:'#app',
+				data:{
+					lists:[
+						{name:'Tom',age:12},
+						{name:'Line',age:15},
+						{name:'WangLi',age:24}
+					]
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">{{a}}</div>
+		<script src="../vue.js"></script>
+		<script>
+			var app = new Vue({
+				el:"#app",
+				data:{
+					a:23,
+				},
+				created:function(){
+					console.log(this.a) //23
+					console.log(this.$el) //undefined
+				},
+				mounted:function(){
+					console.log(this.$el) //<div id="app">23</div>
+				}
+			})
+		</script>
+	</body>
+</html>
